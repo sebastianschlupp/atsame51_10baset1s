@@ -1,0 +1,14 @@
+format_version: v1.0
+configName: default
+folderName: SAME51_10BASET1S
+frameworkPath: /Users/sebastian.schlupp/HarmonyProjects/HarmonyFramework
+processor: ATSAME51J20A
+projectName: SAME51_10BASET1S
+settings:
+  PackageFilter: ''
+  FORCE_OPTIMIZATION: 'false'
+  GENERATE_BACKUP: 'true'
+  TRUSTZONE: 'false'
+  CMSISPath: dev_packs/arm/CMSIS/5.8.0
+  MERGE_STRATEGY: USER_ALL
+  DFPPath: dev_packs/Microchip/SAME51_DFP/3.7.242/atdf/ATSAME51J20A.atdf
