@@ -5799,7 +5799,9 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="drvExtMacLan865x_0" name="DRV_LAN865X_PLCA_NODE_ID_IDX0"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;drvExtMacLan865x_0&gt;
   &lt;drvExtMacLan865x_0 dnOrder=&quot;0&quot; id=&quot;DRV_LAN865X_PLCA_NODE_ID_IDX0&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;1&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/drvExtMacLan865x_0&gt;
 &lt;/drvExtMacLan865x_0&gt;
 </value>
@@ -12359,7 +12361,7 @@
   &lt;tcpipNetConfig_0 dnOrder=&quot;0&quot; id=&quot;TCPIP_NETWORK_DEFAULT_HOST_NAME_IDX0&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
       &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;tcpipNetConfig_0&quot; value=&quot;MCHP_LAN865x&quot;/&gt;
-      &lt;User dnOrder=&quot;1&quot; value=&quot;MCHP_LAN865x_Node0&quot;/&gt;
+      &lt;User dnOrder=&quot;1&quot; value=&quot;MCHP_LAN865x_Node1&quot;/&gt;
     &lt;/Values&gt;
   &lt;/tcpipNetConfig_0&gt;
 &lt;/tcpipNetConfig_0&gt;
@@ -12409,7 +12411,7 @@
   &lt;tcpipNetConfig_0 dnOrder=&quot;0&quot; id=&quot;TCPIP_NETWORK_DEFAULT_IP_ADDRESS_IDX0&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
       &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;tcpipNetConfig_0&quot; value=&quot;192.168.100.11&quot;/&gt;
-      &lt;User dnOrder=&quot;1&quot; value=&quot;192.168.100.10&quot;/&gt;
+      &lt;User dnOrder=&quot;1&quot; value=&quot;192.168.100.11&quot;/&gt;
     &lt;/Values&gt;
   &lt;/tcpipNetConfig_0&gt;
 &lt;/tcpipNetConfig_0&gt;
@@ -12430,6 +12432,7 @@
   &lt;tcpipNetConfig_0 dnOrder=&quot;0&quot; id=&quot;TCPIP_NETWORK_DEFAULT_MAC_ADDR_IDX0&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
       &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;tcpipNetConfig_0&quot; value=&quot;00:04:25:1C:A0:02&quot;/&gt;
+      &lt;User dnOrder=&quot;1&quot; value=&quot;00:04:25:1C:A0:03&quot;/&gt;
     &lt;/Values&gt;
   &lt;/tcpipNetConfig_0&gt;
 &lt;/tcpipNetConfig_0&gt;
@@ -14826,7 +14829,7 @@
       </entry>
       <entry>
          <file>../src/config/default/configuration.h</file>
-         <hash>532ba81008e3245e0ee3c6a884cba86d51202ae51e345fe17a567fad161bae77</hash>
+         <hash>579fe53570435cb844fcd46357ca56e8e30223138ffb3954f94c332f83423e98</hash>
       </entry>
       <entry>
          <file>../src/packs/ATSAME51J20A_DFP/component/freqm.h</file>
@@ -15262,7 +15265,7 @@
       </entry>
       <entry>
          <file>../src/config/default/peripheral/tc/plib_tc0.c</file>
-         <hash>5c699119b1af146f8a0bb313ee0342b7c6905d8b91c0c19a0f7933be60911126</hash>
+         <hash>ec3ff1b8f7b99b2ca2a56e5fd0b964847085577771ff64d0e18c2fb64e65de9c</hash>
       </entry>
       <entry>
          <file>../src/third_party/wolfssl/wolfssl/wolfcrypt/poly1305.h</file>
