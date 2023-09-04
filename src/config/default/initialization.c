@@ -492,6 +492,7 @@ void SYS_Initialize ( void* data )
 
     TC0_TimerInitialize();
 
+    ADC0_Initialize();
     SERCOM1_SPI_Initialize();
 
     EVSYS_Initialize();
@@ -499,6 +500,8 @@ void SYS_Initialize ( void* data )
     DMAC_Initialize();
 
     SERCOM5_USART_Initialize();
+
+    EIC_Initialize();
 
 
 
@@ -544,7 +547,7 @@ void SYS_Initialize ( void* data )
 
     NVIC_Initialize();
 
-
+    USER_Initialize();
     /* MISRAC 2012 deviation block end */
 }
 

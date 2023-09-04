@@ -174,6 +174,10 @@
             <itemPath>../src/config/default/osal/osal_definitions.h</itemPath>
           </logicalFolder>
           <logicalFolder name="peripheral" displayName="peripheral" projectFiles="true">
+            <logicalFolder name="adc" displayName="adc" projectFiles="true">
+              <itemPath>../src/config/default/peripheral/adc/plib_adc_common.h</itemPath>
+              <itemPath>../src/config/default/peripheral/adc/plib_adc0.h</itemPath>
+            </logicalFolder>
             <logicalFolder name="clock" displayName="clock" projectFiles="true">
               <itemPath>../src/config/default/peripheral/clock/plib_clock.h</itemPath>
             </logicalFolder>
@@ -182,6 +186,9 @@
             </logicalFolder>
             <logicalFolder name="dmac" displayName="dmac" projectFiles="true">
               <itemPath>../src/config/default/peripheral/dmac/plib_dmac.h</itemPath>
+            </logicalFolder>
+            <logicalFolder name="eic" displayName="eic" projectFiles="true">
+              <itemPath>../src/config/default/peripheral/eic/plib_eic.h</itemPath>
             </logicalFolder>
             <logicalFolder name="evsys" displayName="evsys" projectFiles="true">
               <itemPath>../src/config/default/peripheral/evsys/plib_evsys.h</itemPath>
@@ -541,6 +548,7 @@
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/random.h</itemPath>
       </logicalFolder>
       <itemPath>../src/app.h</itemPath>
+      <itemPath>userapps/userapps.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -601,6 +609,9 @@
             </logicalFolder>
           </logicalFolder>
           <logicalFolder name="peripheral" displayName="peripheral" projectFiles="true">
+            <logicalFolder name="adc" displayName="adc" projectFiles="true">
+              <itemPath>../src/config/default/peripheral/adc/plib_adc0.c</itemPath>
+            </logicalFolder>
             <logicalFolder name="clock" displayName="clock" projectFiles="true">
               <itemPath>../src/config/default/peripheral/clock/plib_clock.c</itemPath>
             </logicalFolder>
@@ -609,6 +620,9 @@
             </logicalFolder>
             <logicalFolder name="dmac" displayName="dmac" projectFiles="true">
               <itemPath>../src/config/default/peripheral/dmac/plib_dmac.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="eic" displayName="eic" projectFiles="true">
+              <itemPath>../src/config/default/peripheral/eic/plib_eic.c</itemPath>
             </logicalFolder>
             <logicalFolder name="evsys" displayName="evsys" projectFiles="true">
               <itemPath>../src/config/default/peripheral/evsys/plib_evsys.c</itemPath>
@@ -776,6 +790,7 @@
       <itemPath>../src/config/default/pin_configurations.csv</itemPath>
       <itemPath>../src/main.c</itemPath>
       <itemPath>../src/app.c</itemPath>
+      <itemPath>userapps/userapp.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -971,6 +986,11 @@
         <property key="stack-smashing" value=""/>
         <property key="wpo-lto" value="false"/>
       </C32Global>
+      <nEdbgTool>
+        <property key="memories.programmemory.ranges" value="0-fffff"/>
+        <property key="programmerToGoFilePath"
+                  value="/Users/sebastian.schlupp/HarmonyProjects/SAME51_10BASET1S/firmware2/SAME51_10BASET1S.X/debug/default/SAME51_10BASET1S_ptg"/>
+      </nEdbgTool>
     </conf>
   </confs>
 </configurationDescriptor>

@@ -129,6 +129,8 @@ build/default/production/_ext/1360937237/main.o: ../src/main.c \
  ../src/config/default/system/system.h \
  ../src/config/default/system/time/sys_time_definitions.h \
  ../src/config/default/configuration.h ../src/config/default/user.h \
+ ../src/config/default/peripheral/adc/plib_adc0.h \
+ ../src/config/default/peripheral/adc/plib_adc_common.h \
  ../src/config/default/driver/spi/drv_spi.h \
  ../src/config/default/driver/spi/drv_spi_definitions.h \
  ../src/config/default/driver/driver.h \
@@ -177,10 +179,12 @@ build/default/production/_ext/1360937237/main.o: ../src/main.c \
  ../src/config/default/peripheral/cmcc/plib_cmcc.h \
  ../src/config/default/peripheral/sercom/usart/plib_sercom5_usart.h \
  ../src/config/default/peripheral/sercom/usart/plib_sercom_usart_common.h \
+ ../src/config/default/peripheral/eic/plib_eic.h \
  ../src/third_party/wolfssl/wolfssl/wolfcrypt/port/pic32/crypt_wolfcryptcb.h \
  ../src/config/default/system/console/sys_console.h \
  ../src/config/default/system/console/src/sys_console_uart_definitions.h \
- ../src/app.h
+ ../src/app.h \
+ ../src/config/default/../../../SAME51_10BASET1S.X/userapps/userapps.h
 
 ../src/config/default/definitions.h:
 
@@ -446,6 +450,10 @@ build/default/production/_ext/1360937237/main.o: ../src/main.c \
 
 ../src/config/default/user.h:
 
+../src/config/default/peripheral/adc/plib_adc0.h:
+
+../src/config/default/peripheral/adc/plib_adc_common.h:
+
 ../src/config/default/driver/spi/drv_spi.h:
 
 ../src/config/default/driver/spi/drv_spi_definitions.h:
@@ -542,6 +550,8 @@ build/default/production/_ext/1360937237/main.o: ../src/main.c \
 
 ../src/config/default/peripheral/sercom/usart/plib_sercom_usart_common.h:
 
+../src/config/default/peripheral/eic/plib_eic.h:
+
 ../src/third_party/wolfssl/wolfssl/wolfcrypt/port/pic32/crypt_wolfcryptcb.h:
 
 ../src/config/default/system/console/sys_console.h:
@@ -549,3 +559,5 @@ build/default/production/_ext/1360937237/main.o: ../src/main.c \
 ../src/config/default/system/console/src/sys_console_uart_definitions.h:
 
 ../src/app.h:
+
+../src/config/default/../../../SAME51_10BASET1S.X/userapps/userapps.h:

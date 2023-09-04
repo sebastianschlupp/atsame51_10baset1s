@@ -64,6 +64,7 @@ void MemoryManagement_Handler (void);
 void BusFault_Handler (void);
 void UsageFault_Handler (void);
 void DebugMonitor_Handler (void);
+void EIC_EXTINT_15_InterruptHandler (void);
 void DMAC_0_InterruptHandler (void);
 void DMAC_1_InterruptHandler (void);
 void SERCOM1_SPI_InterruptHandler (void);

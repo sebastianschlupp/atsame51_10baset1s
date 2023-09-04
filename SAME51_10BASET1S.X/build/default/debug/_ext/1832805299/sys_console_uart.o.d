@@ -139,6 +139,8 @@ build/default/debug/_ext/1832805299/sys_console_uart.o: \
  ../src/config/default/library/tcpip/tcpip_mac_object.h \
  ../src/config/default/system/time/sys_time.h \
  ../src/config/default/system/time/sys_time_definitions.h \
+ ../src/config/default/peripheral/adc/plib_adc0.h \
+ ../src/config/default/peripheral/adc/plib_adc_common.h \
  ../src/config/default/driver/spi/drv_spi.h \
  ../src/config/default/driver/spi/drv_spi_definitions.h \
  ../src/config/default/driver/spi/src/drv_spi_local.h \
@@ -181,10 +183,12 @@ build/default/debug/_ext/1832805299/sys_console_uart.o: \
  ../src/config/default/peripheral/cmcc/plib_cmcc.h \
  ../src/config/default/peripheral/sercom/usart/plib_sercom5_usart.h \
  ../src/config/default/peripheral/sercom/usart/plib_sercom_usart_common.h \
+ ../src/config/default/peripheral/eic/plib_eic.h \
  ../src/third_party/wolfssl/wolfssl/wolfcrypt/port/pic32/crypt_wolfcryptcb.h \
  ../src/config/default/system/console/sys_console.h \
  ../src/config/default/system/console/src/sys_console_uart_definitions.h \
- ../src/app.h
+ ../src/app.h \
+ ../src/config/default/../../../SAME51_10BASET1S.X/userapps/userapps.h
 
 ../src/config/default/system/console/sys_console.h:
 
@@ -468,6 +472,10 @@ build/default/debug/_ext/1832805299/sys_console_uart.o: \
 
 ../src/config/default/system/time/sys_time_definitions.h:
 
+../src/config/default/peripheral/adc/plib_adc0.h:
+
+../src/config/default/peripheral/adc/plib_adc_common.h:
+
 ../src/config/default/driver/spi/drv_spi.h:
 
 ../src/config/default/driver/spi/drv_spi_definitions.h:
@@ -552,6 +560,8 @@ build/default/debug/_ext/1832805299/sys_console_uart.o: \
 
 ../src/config/default/peripheral/sercom/usart/plib_sercom_usart_common.h:
 
+../src/config/default/peripheral/eic/plib_eic.h:
+
 ../src/third_party/wolfssl/wolfssl/wolfcrypt/port/pic32/crypt_wolfcryptcb.h:
 
 ../src/config/default/system/console/sys_console.h:
@@ -559,3 +569,5 @@ build/default/debug/_ext/1832805299/sys_console_uart.o: \
 ../src/config/default/system/console/src/sys_console_uart_definitions.h:
 
 ../src/app.h:
+
+../src/config/default/../../../SAME51_10BASET1S.X/userapps/userapps.h:

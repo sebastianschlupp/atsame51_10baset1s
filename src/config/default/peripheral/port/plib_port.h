@@ -83,6 +83,15 @@
 #define LAN865x_RST_Get()               (((PORT_REGS->GROUP[0].PORT_IN >> 7U)) & 0x01U)
 #define LAN865x_RST_PIN                  PORT_PIN_PA07
 
+/*** Macros for LED0 pin ***/
+#define LED0_Set()               (PORT_REGS->GROUP[0].PORT_OUTSET = ((uint32_t)1U << 14U))
+#define LED0_Clear()             (PORT_REGS->GROUP[0].PORT_OUTCLR = ((uint32_t)1U << 14U))
+#define LED0_Toggle()            (PORT_REGS->GROUP[0].PORT_OUTTGL = ((uint32_t)1U << 14U))
+#define LED0_OutputEnable()      (PORT_REGS->GROUP[0].PORT_DIRSET = ((uint32_t)1U << 14U))
+#define LED0_InputEnable()       (PORT_REGS->GROUP[0].PORT_DIRCLR = ((uint32_t)1U << 14U))
+#define LED0_Get()               (((PORT_REGS->GROUP[0].PORT_IN >> 14U)) & 0x01U)
+#define LED0_PIN                  PORT_PIN_PA14
+
 /*** Macros for LAN865x_MOSI pin ***/
 #define LAN865x_MOSI_Get()               (((PORT_REGS->GROUP[0].PORT_IN >> 16U)) & 0x01U)
 #define LAN865x_MOSI_PIN                  PORT_PIN_PA16

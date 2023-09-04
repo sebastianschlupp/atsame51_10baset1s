@@ -53,7 +53,7 @@
 #include "configuration.h"
 #include "definitions.h"
 #include "sys_tasks.h"
-
+#include "../../../SAME51_10BASET1S.X/userapps/userapps.h"
 
 
 
@@ -93,6 +93,7 @@ SYS_CMD_Tasks();
     /* Maintain the application's state machine. */
         /* Call Application task APP. */
     APP_Tasks();
+    USER_Tasks();
 
 
 

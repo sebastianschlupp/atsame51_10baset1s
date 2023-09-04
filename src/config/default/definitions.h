@@ -53,6 +53,7 @@
 #include "peripheral/tc/plib_tc0.h"
 #include "driver/lan865x/drv_lan865x.h"
 #include "system/time/sys_time.h"
+#include "peripheral/adc/plib_adc0.h"
 #include "driver/spi/drv_spi.h"
 #include "library/tcpip/tcpip.h"
 #include "system/sys_time_h2_adapter.h"
@@ -73,11 +74,12 @@
 #include "peripheral/dmac/plib_dmac.h"
 #include "peripheral/cmcc/plib_cmcc.h"
 #include "peripheral/sercom/usart/plib_sercom5_usart.h"
+#include "peripheral/eic/plib_eic.h"
 #include "wolfssl/wolfcrypt/port/pic32/crypt_wolfcryptcb.h"
 #include "system/console/sys_console.h"
 #include "system/console/src/sys_console_uart_definitions.h"
 #include "app.h"
-
+#include "../../../SAME51_10BASET1S.X/userapps/userapps.h"
 
 
 // DOM-IGNORE-BEGIN
