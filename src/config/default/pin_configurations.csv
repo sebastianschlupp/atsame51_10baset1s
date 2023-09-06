@@ -7,7 +7,7 @@ Pin Number,Pin ID,Custom Name,Function,Mode, Direction,Latch,Pull Up,Pull Down,D
 6,PB05,,Available,,,,,,NORMAL
 9,PB06,,Available,,,,,,NORMAL
 10,PB07,,Available,,,,,,NORMAL
-11,PB08,,Available,,,,,,NORMAL
+11,PB08,AN3,ADC0_AIN2/X1/Y1,Analog,High Impedance,n/a,,,NORMAL
 12,PB09,,Available,,,,,,NORMAL
 13,PA04,LAN865x_INT,GPIO,Digital,In,n/a,No,No,NORMAL
 14,PA05,,Available,,,,,,NORMAL
@@ -16,7 +16,7 @@ Pin Number,Pin ID,Custom Name,Function,Mode, Direction,Latch,Pull Up,Pull Down,D
 17,PA08,,Available,,,,,,NORMAL
 18,PA09,,Available,,,,,,NORMAL
 19,PA10,,Available,,,,,,NORMAL
-20,PA11,,Available,,,,,,NORMAL
+20,PA11,PWM2,TCC0_WO3,Digital,High Impedance,n/a,No,No,NORMAL
 23,PB10,,Available,,,,,,NORMAL
 24,PB11,,Available,,,,,,NORMAL
 25,PB12,,Available,,,,,,NORMAL
@@ -49,4 +49,4 @@ Pin Number,Pin ID,Custom Name,Function,Mode, Direction,Latch,Pull Up,Pull Down,D
 61,PB00,,Available,,,,,,NORMAL
 62,PB01,,Available,,,,,,NORMAL
 63,PB02,,Available,,,,,,NORMAL
-64,PB03,,Available,,,,,,NORMAL
+64,PB03,AN2,ADC0_AIN15/X21/Y21,Analog,High Impedance,n/a,,,NORMAL

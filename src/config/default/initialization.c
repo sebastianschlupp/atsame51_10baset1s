@@ -503,6 +503,8 @@ void SYS_Initialize ( void* data )
 
     EIC_Initialize();
 
+    TCC0_PWMInitialize();
+
 
 
     /* MISRAC 2012 deviation block start */

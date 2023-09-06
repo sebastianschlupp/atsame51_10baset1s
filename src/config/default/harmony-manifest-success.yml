@@ -4,7 +4,7 @@
 
 
 project: SAME51_10BASET1S
-creation_date: 2023-09-04T19:31:30.421+02:00[Europe/Zagreb]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
+creation_date: 2023-09-06T17:14:33.061+02:00[Europe/Zagreb]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
 operating_system: Mac OS X
 mcc_mode: IDE            # [IDE|Standalone|Headless]
 mcc_version: v5.3.7
@@ -14,10 +14,10 @@ harmony_version: v1.3.2
 compiler: XC32 (v4.30) 
 
 modules:
-    - {name: "csp", version: "v3.17.0"}
+    - {name: "csp", version: "v3.18.0"}
     - {name: "net_10base_t1s", version: "v1.3.0"}
     - {name: "core", version: "v3.13.1"}
-    - {name: "dev_packs", version: "v3.17.0"}
+    - {name: "dev_packs", version: "v3.18.0"}
     - {name: "wolfssl", version: "v5.4.0"}
     - {name: "net", version: "v3.10.1"}
     - {name: "crypto", version: "v3.8.0"}

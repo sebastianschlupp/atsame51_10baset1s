@@ -65,6 +65,10 @@
 // *****************************************************************************
 // *****************************************************************************
 
+/*** Macros for AN3 pin ***/
+#define AN3_Get()               (((PORT_REGS->GROUP[1].PORT_IN >> 8U)) & 0x01U)
+#define AN3_PIN                  PORT_PIN_PB08
+
 /*** Macros for LAN865x_INT pin ***/
 #define LAN865x_INT_Set()               (PORT_REGS->GROUP[0].PORT_OUTSET = ((uint32_t)1U << 4U))
 #define LAN865x_INT_Clear()             (PORT_REGS->GROUP[0].PORT_OUTCLR = ((uint32_t)1U << 4U))
@@ -82,6 +86,10 @@
 #define LAN865x_RST_InputEnable()       (PORT_REGS->GROUP[0].PORT_DIRCLR = ((uint32_t)1U << 7U))
 #define LAN865x_RST_Get()               (((PORT_REGS->GROUP[0].PORT_IN >> 7U)) & 0x01U)
 #define LAN865x_RST_PIN                  PORT_PIN_PA07
+
+/*** Macros for PWM2 pin ***/
+#define PWM2_Get()               (((PORT_REGS->GROUP[0].PORT_IN >> 11U)) & 0x01U)
+#define PWM2_PIN                  PORT_PIN_PA11
 
 /*** Macros for LED0 pin ***/
 #define LED0_Set()               (PORT_REGS->GROUP[0].PORT_OUTSET = ((uint32_t)1U << 14U))
@@ -120,6 +128,10 @@
 /*** Macros for UART_RX pin ***/
 #define UART_RX_Get()               (((PORT_REGS->GROUP[1].PORT_IN >> 17U)) & 0x01U)
 #define UART_RX_PIN                  PORT_PIN_PB17
+
+/*** Macros for AN2 pin ***/
+#define AN2_Get()               (((PORT_REGS->GROUP[1].PORT_IN >> 3U)) & 0x01U)
+#define AN2_PIN                  PORT_PIN_PB03
 
 // *****************************************************************************
 /* PORT Group

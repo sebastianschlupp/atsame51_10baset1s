@@ -183,6 +183,8 @@ build/default/production/_ext/1171490990/exceptions.o: \
  ../src/config/default/peripheral/sercom/usart/plib_sercom_usart_common.h \
  ../src/config/default/peripheral/eic/plib_eic.h \
  ../src/third_party/wolfssl/wolfssl/wolfcrypt/port/pic32/crypt_wolfcryptcb.h \
+ ../src/config/default/peripheral/tcc/plib_tcc0.h \
+ ../src/config/default/peripheral/tcc/plib_tcc_common.h \
  ../src/config/default/system/console/sys_console.h \
  ../src/config/default/system/console/src/sys_console_uart_definitions.h \
  ../src/app.h \
@@ -560,6 +562,10 @@ build/default/production/_ext/1171490990/exceptions.o: \
 ../src/config/default/peripheral/eic/plib_eic.h:
 
 ../src/third_party/wolfssl/wolfssl/wolfcrypt/port/pic32/crypt_wolfcryptcb.h:
+
+../src/config/default/peripheral/tcc/plib_tcc0.h:
+
+../src/config/default/peripheral/tcc/plib_tcc_common.h:
 
 ../src/config/default/system/console/sys_console.h:
 

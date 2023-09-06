@@ -76,10 +76,12 @@
 #include "peripheral/sercom/usart/plib_sercom5_usart.h"
 #include "peripheral/eic/plib_eic.h"
 #include "wolfssl/wolfcrypt/port/pic32/crypt_wolfcryptcb.h"
+#include "peripheral/tcc/plib_tcc0.h"
 #include "system/console/sys_console.h"
 #include "system/console/src/sys_console_uart_definitions.h"
 #include "app.h"
 #include "../../../SAME51_10BASET1S.X/userapps/userapps.h"
+
 
 
 // DOM-IGNORE-BEGIN

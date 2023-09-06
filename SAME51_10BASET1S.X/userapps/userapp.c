@@ -54,7 +54,7 @@
     Any additional remarks
  */
 //int global_data;
-
+uint16_t AIN_ADC_value;
 
 /* ************************************************************************** */
 /* ************************************************************************** */
@@ -114,20 +114,33 @@
 /*static int ExampleLocalFunction(int param1, int param2) {
     return 0;
 }*/
+uint16_t AIN_ADC_Read(ADC_POSINPUT positiveInput, ADC_NEGINPUT negativeInput){
+    uint16_t tempADCvalue;
+    ADC0_ChannelSelect(positiveInput, negativeInput);
+    ADC0_ConversionStart();
+    while(ADC0_ConversionStatusGet()==0)
+        ;
+    tempADCvalue=ADC0_ConversionResultGet();
+    return tempADCvalue;
+}
 void EIC_User_Handler(){
     SYS_DEBUG_PRINT(SYS_ERROR_DEBUG, "Normal Boop!\n\r");
+    AIN_ADC_value = AIN_ADC_Read(ADC_POSINPUT_AIN2, ADC_NEGINPUT_GND);//12bit value; 0=min, 4095=max; Vref=3.3V;
+    SYS_DEBUG_PRINT(SYS_ERROR_DEBUG, "AN3 ADC value read is: %u\n\r",AIN_ADC_value);
+    SYS_DEBUG_PRINT(SYS_ERROR_DEBUG, "If this value is above 2046, the LED should toggle \n\r");
+    if (AIN_ADC_value > 2046)
+        LED0_Toggle();
+    AIN_ADC_value = AIN_ADC_Read(ADC_POSINPUT_AIN15, ADC_NEGINPUT_GND);//12bit value; 0=min, 4095=max; Vref=3.3V;
+    SYS_DEBUG_PRINT(SYS_ERROR_DEBUG, "AN2 ADC value read is: %u\n\r",AIN_ADC_value);
 }
 void USER_Initialize(void){
     EIC_CallbackRegister(EIC_PIN_15,EIC_User_Handler, 0);
+    ADC0_Enable();
+    ADC0_InterruptsEnable(ADC_INTFLAG_RESRDY_Msk);
+    TCC0_PWMStart();
 }
 void USER_Tasks(void){
-    /*Possible error levels:
-        SYS_ERROR_FATAL = 0, 
-        SYS_ERROR_ERROR = 1, 
-        SYS_ERROR_WARNING = 2, 
-        SYS_ERROR_INFO = 3, 
-        SYS_ERROR_DEBUG = 4?*/
-    //SYS_DEBUG_PRINT(SYS_ERROR_DEBUG, "Normal Boop!");
+    
 }
 
 /* ************************************************************************** */
