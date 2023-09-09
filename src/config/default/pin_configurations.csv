@@ -26,7 +26,7 @@ Pin Number,Pin ID,Custom Name,Function,Mode, Direction,Latch,Pull Up,Pull Down,D
 29,PA12,,Available,,,,,,NORMAL
 30,PA13,,Available,,,,,,NORMAL
 31,PA14,LED0,GPIO,Digital,Out,Low,,,NORMAL
-32,PA15,,EIC_EXTINT15,Digital,In,n/a,Yes,No,NORMAL
+32,PA15,SW0,EIC_EXTINT15,Digital,In,n/a,Yes,No,NORMAL
 35,PA16,LAN865x_MOSI,SERCOM1_PAD0,Digital,High Impedance,n/a,No,No,STRONG
 36,PA17,LAN865x_SCK,SERCOM1_PAD1,Digital,High Impedance,n/a,No,No,STRONG
 37,PA18,LAN865x_CS,GPIO,Digital,Out,Low,,,STRONG

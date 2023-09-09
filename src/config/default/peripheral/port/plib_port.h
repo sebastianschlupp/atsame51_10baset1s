@@ -100,6 +100,10 @@
 #define LED0_Get()               (((PORT_REGS->GROUP[0].PORT_IN >> 14U)) & 0x01U)
 #define LED0_PIN                  PORT_PIN_PA14
 
+/*** Macros for SW0 pin ***/
+#define SW0_Get()               (((PORT_REGS->GROUP[0].PORT_IN >> 15U)) & 0x01U)
+#define SW0_PIN                  PORT_PIN_PA15
+
 /*** Macros for LAN865x_MOSI pin ***/
 #define LAN865x_MOSI_Get()               (((PORT_REGS->GROUP[0].PORT_IN >> 16U)) & 0x01U)
 #define LAN865x_MOSI_PIN                  PORT_PIN_PA16
