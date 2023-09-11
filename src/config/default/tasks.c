@@ -52,8 +52,7 @@
 
 #include "configuration.h"
 #include "definitions.h"
-#include "sys_tasks.h"
-#include "../../../SAME51_10BASET1S.X/userapps/userapps.h"
+#include "sys_tasks.h"x
 
 
 

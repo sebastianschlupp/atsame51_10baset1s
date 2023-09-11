@@ -110,6 +110,35 @@ extern "C" {
         bool some_flag;
 
     } example_struct_t;*/
+typedef enum{
+    //Default state
+    SYS_USER_ERROR_NOERROR = 0x00U,
+    //Error flags related to unsuitable input values 0x10
+    SYS_USER_ERROR_GENERICINPUTVALUEFAULT = 0x10U,
+    SYS_USER_ERROR_INPNOTINRANGE = 0x11U, //the input values are not within the range required for the function to work properly
+    SYS_USER_ERROR_12 = 0x12U,
+    SYS_USER_ERROR_13 = 0x13U,
+    SYS_USER_ERROR_14 = 0x14U,
+    SYS_USER_ERROR_15 = 0x15U,
+    //Error flags related to ... 2x
+            
+    //Error flags related to interrupt handling 3x
+    SYS_USER_ERROR_GENERICINTFAULT = 0x30U,
+    SYS_USER_ERROR_INTFLAGNOTHANDLED = 0x31U, //the interrupt is setting a flag that has to be reset in the function that handles it
+
+    //Error flags related to ADC handling 4x
+    SYS_USER_ERROR_GENERICADCFAULT = 0x30U,
+    SYS_USER_ERROR_ADCCONVERSIONFAULT = 0x31U, //after a conversion is started, this flag will be set until the conversion is done. This way we don't need a while loop blocking all code execution to know when the result is done.
+    //Error flags related to ... 5x
+    SYS_ERROR_55 = 0x15U
+
+} SYS_USER_ERROR_FLAGS;
+
+typedef struct _ADC_Status {
+        ADC_POSINPUT Pchannel;
+        ADC_NEGINPUT Nchannel;
+        bool busy;
+    } ADC_Status;
 
     // *****************************************************************************
     // *****************************************************************************
@@ -122,49 +151,6 @@ extern "C" {
      */
 
     // *****************************************************************************
-    /*
-      @Function
-        int ExampleFunctionName ( int param1, int param2 ) 
-
-      @Summary
-        Brief one-line description of the function.
-
-      @Description
-        Full description, explaining the purpose and usage of the function.
-        <p>
-        Additional description in consecutive paragraphs separated by HTML 
-        paragraph breaks, as necessary.
-        <p>
-        Type "JavaDoc" in the "How Do I?" IDE toolbar for more information on tags.
-
-      @Precondition
-        List and describe any required preconditions. If there are no preconditions,
-        enter "None."
-
-      @Parameters
-        @param param1 Describe the first parameter to the function.
-    
-        @param param2 Describe the second parameter to the function.
-
-      @Returns
-        List (if feasible) and describe the return values of the function.
-        <ul>
-          <li>1   Indicates an error occurred
-          <li>0   Indicates an error did not occur
-        </ul>
-
-      @Remarks
-        Describe any special behavior not described above.
-        <p>
-        Any additional remarks.
-
-      @Example
-        @code
-        if(ExampleFunctionName(1, 2) == 0)
-        {
-            return 3;
-        }
-     */
     void USER_Initialize(void);
     void USER_Tasks(void);
 
