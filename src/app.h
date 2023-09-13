@@ -31,7 +31,10 @@
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdlib.h>
+#include "definitions.h"
 #include "configuration.h"
+
+#include "app_commands.h"
 
 // DOM-IGNORE-BEGIN
 #ifdef __cplusplus  // Provide C++ Compatibility
@@ -64,7 +67,25 @@ typedef enum
     APP_STATE_INIT=0,
     APP_STATE_SERVICE_TASKS,
     /* TODO: Define states used by the application state machine. */
+    //UDP communication states
+    APP_TCPIP_WAIT_INIT,
 
+    APP_TCPIP_WAIT_FOR_IP,
+
+    APP_TCPIP_WAITING_FOR_COMMAND,
+    APP_TCPIP_OPENING_SERVER,
+
+
+    APP_TCPIP_WAIT_ON_DNS,
+
+    APP_TCPIP_WAIT_FOR_CONNECTION,
+    APP_TCPIP_SERVING_CONNECTION,
+
+    APP_TCPIP_WAIT_FOR_RESPONSE,
+
+    APP_TCPIP_CLOSING_CONNECTION,
+
+    APP_TCPIP_ERROR,
 } APP_STATES;
 
 
@@ -87,7 +108,19 @@ typedef struct
     APP_STATES state;
 
     /* TODO: Define any additional data used by the application. */
+    /* Application's current state */
+    APP_STATES              clientState;
+    APP_STATES              serverState;
 
+    /* Application data buffer */
+
+    TCP_SOCKET              clientSocket;
+    TCP_SOCKET              serverSocket;
+
+    char *            host;
+
+    char *            path;
+    uint16_t          port;
 } APP_DATA;
 
 // *****************************************************************************

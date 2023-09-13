@@ -188,7 +188,8 @@ build/default/debug/_ext/181894553/drv_lan865x_api.o: \
  ../src/config/default/peripheral/tcc/plib_tcc_common.h \
  ../src/config/default/system/console/sys_console.h \
  ../src/config/default/system/console/src/sys_console_uart_definitions.h \
- ../src/app.h ../src/userapp.h \
+ ../src/config/default/library/tcpip/tcpip.h ../src/app.h \
+ ../src/app_commands.h ../src/userapp.h \
  ../src/config/default/driver/lan865x/src/dynamic/drv_lan865x_local.h \
  ../src/config/default/system_config.h \
  ../src/config/default/configuration.h \
@@ -198,7 +199,6 @@ build/default/debug/_ext/181894553/drv_lan865x_api.o: \
  ../src/config/default/system/sys_random_h2_adapter.h \
  ../src/config/default/system/sys_time_h2_adapter.h \
  ../src/config/default/library/tcpip/src/common/helpers.h \
- ../src/config/default/library/tcpip/tcpip.h \
  ../src/config/default/library/tcpip/src/tcpip_types.h \
  ../src/config/default/library/tcpip/src/link_list.h \
  ../src/config/default/library/tcpip/src/tcpip_heap_alloc.h \
@@ -597,7 +597,11 @@ build/default/debug/_ext/181894553/drv_lan865x_api.o: \
 
 ../src/config/default/system/console/src/sys_console_uart_definitions.h:
 
+../src/config/default/library/tcpip/tcpip.h:
+
 ../src/app.h:
+
+../src/app_commands.h:
 
 ../src/userapp.h:
 
@@ -618,8 +622,6 @@ build/default/debug/_ext/181894553/drv_lan865x_api.o: \
 ../src/config/default/system/sys_time_h2_adapter.h:
 
 ../src/config/default/library/tcpip/src/common/helpers.h:
-
-../src/config/default/library/tcpip/tcpip.h:
 
 ../src/config/default/library/tcpip/src/tcpip_types.h:
 

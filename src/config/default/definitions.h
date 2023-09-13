@@ -80,6 +80,8 @@
 #include "peripheral/tcc/plib_tcc0.h"
 #include "system/console/sys_console.h"
 #include "system/console/src/sys_console_uart_definitions.h"
+#include "tcpip/tcpip.h"
+#include "tcpip/tcpip_common_ports.h"
 #include "app.h"
 #include "userapp.h"
 

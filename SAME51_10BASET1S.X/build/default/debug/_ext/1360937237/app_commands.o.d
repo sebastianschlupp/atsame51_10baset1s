@@ -1,6 +1,7 @@
-build/default/debug/_ext/1171490990/initialization.o: \
- ../src/config/default/initialization.c \
- ../src/config/default/configuration.h ../src/config/default/user.h \
+build/default/debug/_ext/1360937237/app_commands.o: ../src/app_commands.c \
+ ../src/app_commands.h ../src/app.h ../src/config/default/definitions.h \
+ ../src/config/default/crypto/crypto.h \
+ ../src/config/default/peripheral/nvmctrl/plib_nvmctrl.h \
  ../src/config/default/device.h \
  ../src/packs/ATSAME51J20A_DFP/same51j20a.h \
  ../src/packs/CMSIS/CMSIS/Core/Include/core_cm4.h \
@@ -102,13 +103,9 @@ build/default/debug/_ext/1171490990/initialization.o: \
  ../src/packs/ATSAME51J20A_DFP/instance/usb.h \
  ../src/packs/ATSAME51J20A_DFP/instance/wdt.h \
  ../src/packs/ATSAME51J20A_DFP/pio/same51j20a.h \
- ../src/config/default/device_cache.h \
+ ../src/config/default/device_cache.h ../src/config/default/device.h \
  ../src/config/default/toolchain_specifics.h \
  ../src/packs/CMSIS/CMSIS/Core/Include/cmsis_compiler.h \
- ../src/config/default/definitions.h \
- ../src/config/default/crypto/crypto.h \
- ../src/config/default/peripheral/nvmctrl/plib_nvmctrl.h \
- ../src/config/default/device.h \
  ../src/config/default/peripheral/tc/plib_tc1.h \
  ../src/config/default/peripheral/tc/plib_tc_common.h \
  ../src/config/default/peripheral/tc/plib_tc0.h \
@@ -132,7 +129,7 @@ build/default/debug/_ext/1171490990/initialization.o: \
  ../src/config/default/system/time/sys_time.h \
  ../src/config/default/system/system.h \
  ../src/config/default/system/time/sys_time_definitions.h \
- ../src/config/default/configuration.h \
+ ../src/config/default/configuration.h ../src/config/default/user.h \
  ../src/config/default/peripheral/adc/plib_adc0.h \
  ../src/config/default/peripheral/adc/plib_adc_common.h \
  ../src/config/default/driver/spi/drv_spi.h \
@@ -190,12 +187,17 @@ build/default/debug/_ext/1171490990/initialization.o: \
  ../src/config/default/system/console/sys_console.h \
  ../src/config/default/system/console/src/sys_console_uart_definitions.h \
  ../src/config/default/library/tcpip/tcpip.h ../src/app.h \
- ../src/config/default/definitions.h ../src/app_commands.h \
  ../src/userapp.h
 
-../src/config/default/configuration.h:
+../src/app_commands.h:
 
-../src/config/default/user.h:
+../src/app.h:
+
+../src/config/default/definitions.h:
+
+../src/config/default/crypto/crypto.h:
+
+../src/config/default/peripheral/nvmctrl/plib_nvmctrl.h:
 
 ../src/config/default/device.h:
 
@@ -401,17 +403,11 @@ build/default/debug/_ext/1171490990/initialization.o: \
 
 ../src/config/default/device_cache.h:
 
+../src/config/default/device.h:
+
 ../src/config/default/toolchain_specifics.h:
 
 ../src/packs/CMSIS/CMSIS/Core/Include/cmsis_compiler.h:
-
-../src/config/default/definitions.h:
-
-../src/config/default/crypto/crypto.h:
-
-../src/config/default/peripheral/nvmctrl/plib_nvmctrl.h:
-
-../src/config/default/device.h:
 
 ../src/config/default/peripheral/tc/plib_tc1.h:
 
@@ -460,6 +456,8 @@ build/default/debug/_ext/1171490990/initialization.o: \
 ../src/config/default/system/time/sys_time_definitions.h:
 
 ../src/config/default/configuration.h:
+
+../src/config/default/user.h:
 
 ../src/config/default/peripheral/adc/plib_adc0.h:
 
@@ -576,9 +574,5 @@ build/default/debug/_ext/1171490990/initialization.o: \
 ../src/config/default/library/tcpip/tcpip.h:
 
 ../src/app.h:
-
-../src/config/default/definitions.h:
-
-../src/app_commands.h:
 
 ../src/userapp.h:

@@ -189,7 +189,9 @@ build/default/debug/_ext/1171490990/interrupts.o: \
  ../src/config/default/peripheral/tcc/plib_tcc_common.h \
  ../src/config/default/system/console/sys_console.h \
  ../src/config/default/system/console/src/sys_console_uart_definitions.h \
- ../src/app.h ../src/userapp.h ../src/config/default/definitions.h
+ ../src/config/default/library/tcpip/tcpip.h ../src/app.h \
+ ../src/config/default/definitions.h ../src/app_commands.h \
+ ../src/userapp.h
 
 ../src/config/default/configuration.h:
 
@@ -575,8 +577,12 @@ build/default/debug/_ext/1171490990/interrupts.o: \
 
 ../src/config/default/system/console/src/sys_console_uart_definitions.h:
 
+../src/config/default/library/tcpip/tcpip.h:
+
 ../src/app.h:
 
-../src/userapp.h:
-
 ../src/config/default/definitions.h:
+
+../src/app_commands.h:
+
+../src/userapp.h:
