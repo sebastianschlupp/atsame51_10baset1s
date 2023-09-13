@@ -70,6 +70,7 @@ void DMAC_1_InterruptHandler (void);
 void SERCOM1_SPI_InterruptHandler (void);
 void SERCOM5_USART_InterruptHandler (void);
 void TC0_TimerInterruptHandler (void);
+void TC1_TimerInterruptHandler (void);
 
 
 

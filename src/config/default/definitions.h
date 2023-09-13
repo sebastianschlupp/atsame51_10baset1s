@@ -50,6 +50,7 @@
 #include <stdbool.h>
 #include "crypto/crypto.h"
 #include "peripheral/nvmctrl/plib_nvmctrl.h"
+#include "peripheral/tc/plib_tc1.h"
 #include "peripheral/tc/plib_tc0.h"
 #include "driver/lan865x/drv_lan865x.h"
 #include "system/time/sys_time.h"
@@ -80,8 +81,7 @@
 #include "system/console/sys_console.h"
 #include "system/console/src/sys_console_uart_definitions.h"
 #include "app.h"
-#include "../../../SAME51_10BASET1S.X/userapps/userapps.h"
-
+#include "userapp.h"
 
 
 // DOM-IGNORE-BEGIN

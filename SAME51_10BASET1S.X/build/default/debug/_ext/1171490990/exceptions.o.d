@@ -108,8 +108,9 @@ build/default/debug/_ext/1171490990/exceptions.o: \
  ../src/config/default/crypto/crypto.h \
  ../src/config/default/peripheral/nvmctrl/plib_nvmctrl.h \
  ../src/config/default/device.h \
- ../src/config/default/peripheral/tc/plib_tc0.h \
+ ../src/config/default/peripheral/tc/plib_tc1.h \
  ../src/config/default/peripheral/tc/plib_tc_common.h \
+ ../src/config/default/peripheral/tc/plib_tc0.h \
  ../src/config/default/driver/lan865x/drv_lan865x.h \
  ../src/config/default/driver/driver_common.h \
  ../src/config/default/driver/spi/drv_spi_definitions.h \
@@ -187,9 +188,7 @@ build/default/debug/_ext/1171490990/exceptions.o: \
  ../src/config/default/peripheral/tcc/plib_tcc_common.h \
  ../src/config/default/system/console/sys_console.h \
  ../src/config/default/system/console/src/sys_console_uart_definitions.h \
- ../src/app.h \
- ../src/config/default/../../../SAME51_10BASET1S.X/userapps/userapps.h \
- ../src/config/default/definitions.h
+ ../src/app.h ../src/userapp.h ../src/config/default/definitions.h
 
 ../src/config/default/configuration.h:
 
@@ -413,9 +412,11 @@ build/default/debug/_ext/1171490990/exceptions.o: \
 
 ../src/config/default/device.h:
 
-../src/config/default/peripheral/tc/plib_tc0.h:
+../src/config/default/peripheral/tc/plib_tc1.h:
 
 ../src/config/default/peripheral/tc/plib_tc_common.h:
+
+../src/config/default/peripheral/tc/plib_tc0.h:
 
 ../src/config/default/driver/lan865x/drv_lan865x.h:
 
@@ -573,6 +574,6 @@ build/default/debug/_ext/1171490990/exceptions.o: \
 
 ../src/app.h:
 
-../src/config/default/../../../SAME51_10BASET1S.X/userapps/userapps.h:
+../src/userapp.h:
 
 ../src/config/default/definitions.h:

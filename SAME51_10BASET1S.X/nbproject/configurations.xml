@@ -215,6 +215,7 @@
             <logicalFolder name="tc" displayName="tc" projectFiles="true">
               <itemPath>../src/config/default/peripheral/tc/plib_tc_common.h</itemPath>
               <itemPath>../src/config/default/peripheral/tc/plib_tc0.h</itemPath>
+              <itemPath>../src/config/default/peripheral/tc/plib_tc1.h</itemPath>
             </logicalFolder>
             <logicalFolder name="tcc" displayName="tcc" projectFiles="true">
               <itemPath>../src/config/default/peripheral/tcc/plib_tcc0.h</itemPath>
@@ -650,6 +651,7 @@
             </logicalFolder>
             <logicalFolder name="tc" displayName="tc" projectFiles="true">
               <itemPath>../src/config/default/peripheral/tc/plib_tc0.c</itemPath>
+              <itemPath>../src/config/default/peripheral/tc/plib_tc1.c</itemPath>
             </logicalFolder>
             <logicalFolder name="tcc" displayName="tcc" projectFiles="true">
               <itemPath>../src/config/default/peripheral/tcc/plib_tcc0.c</itemPath>
@@ -797,7 +799,7 @@
       <itemPath>../src/config/default/pin_configurations.csv</itemPath>
       <itemPath>../src/main.c</itemPath>
       <itemPath>../src/app.c</itemPath>
-      <itemPath>userapps/userapp.c</itemPath>
+      <itemPath>../src/userapp.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -806,6 +808,9 @@
       <itemPath>SAME51_10BASET1S.mc3</itemPath>
     </logicalFolder>
   </logicalFolder>
+  <sourceRootList>
+    <Elem>../src</Elem>
+  </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
     <conf name="default" type="2">

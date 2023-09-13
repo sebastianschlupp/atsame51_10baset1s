@@ -490,6 +490,8 @@ void SYS_Initialize ( void* data )
 
 
 
+    TC1_TimerInitialize();
+
     TC0_TimerInitialize();
 
     ADC0_Initialize();

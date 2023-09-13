@@ -1,5 +1,5 @@
-build/default/debug/_ext/1360937237/main.o: ../src/main.c \
- ../src/config/default/definitions.h \
+build/default/debug/_ext/1360937237/userapp.o: ../src/userapp.c \
+ ../src/userapp.h ../src/config/default/definitions.h \
  ../src/config/default/crypto/crypto.h \
  ../src/config/default/peripheral/nvmctrl/plib_nvmctrl.h \
  ../src/config/default/device.h \
@@ -187,6 +187,8 @@ build/default/debug/_ext/1360937237/main.o: ../src/main.c \
  ../src/config/default/system/console/sys_console.h \
  ../src/config/default/system/console/src/sys_console_uart_definitions.h \
  ../src/app.h ../src/userapp.h
+
+../src/userapp.h:
 
 ../src/config/default/definitions.h:
 
