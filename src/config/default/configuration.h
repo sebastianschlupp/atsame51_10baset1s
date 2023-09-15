@@ -99,6 +99,9 @@ extern "C" {
 #define SYS_CMD_PRINT_BUFFER_SIZE          1024U
 #define SYS_CMD_BUFFER_DMA_READY
 
+/* Command System Service RTOS Configurations*/
+#define SYS_CMD_RTOS_STACK_SIZE                256
+#define SYS_CMD_RTOS_TASK_PRIORITY             1
 
 
 #define SYS_DEBUG_ENABLE
@@ -157,7 +160,6 @@ extern "C" {
 #define DRV_SPI_DMA_MODE
 #define DRV_SPI_XMIT_DMA_CH_IDX0              SYS_DMA_CHANNEL_0
 #define DRV_SPI_RCV_DMA_CH_IDX0               SYS_DMA_CHANNEL_1
-#define DRV_SPI_QUEUE_SIZE_IDX0               1
 
 
 
@@ -351,6 +353,9 @@ extern "C" {
 
 
 
+/* TCP/IP RTOS Configurations*/
+#define TCPIP_RTOS_STACK_SIZE                1024
+#define TCPIP_RTOS_PRIORITY             1
 
 
 

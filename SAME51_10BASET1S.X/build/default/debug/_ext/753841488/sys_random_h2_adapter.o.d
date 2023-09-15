@@ -113,9 +113,20 @@ build/default/debug/_ext/753841488/sys_random_h2_adapter.o: \
  ../src/config/default/device.h ../src/config/default/crypto/crypto.h \
  ../src/config/default/osal/osal.h \
  ../src/config/default/osal/osal_definitions.h \
- ../src/config/default/osal/osal_impl_basic.h \
- ../src/config/default/system/int/sys_int.h \
- ../src/config/default/system/int/sys_int_mapping.h
+ ../src/config/default/osal/osal_freertos.h \
+ ../src/third_party/rtos/FreeRTOS/Source/include/FreeRTOS.h \
+ ../src/config/default/FreeRTOSConfig.h \
+ ../src/third_party/rtos/FreeRTOS/Source/include/projdefs.h \
+ ../src/third_party/rtos/FreeRTOS/Source/include/portable.h \
+ ../src/third_party/rtos/FreeRTOS/Source/include/deprecated_definitions.h \
+ ../src/third_party/rtos/FreeRTOS/Source/portable/GCC/SAM/ARM_CM4F/portmacro.h \
+ ../src/third_party/rtos/FreeRTOS/Source/include/mpu_wrappers.h \
+ ../src/third_party/rtos/FreeRTOS/Source/include/queue.h \
+ ../src/third_party/rtos/FreeRTOS/Source/include/task.h \
+ ../src/third_party/rtos/FreeRTOS/Source/include/list.h \
+ ../src/third_party/rtos/FreeRTOS/Source/include/semphr.h \
+ ../src/third_party/rtos/FreeRTOS/Source/include/queue.h \
+ ../src/third_party/rtos/FreeRTOS/Source/include/task.h
 
 ../src/config/default/configuration.h:
 
@@ -347,8 +358,30 @@ build/default/debug/_ext/753841488/sys_random_h2_adapter.o: \
 
 ../src/config/default/osal/osal_definitions.h:
 
-../src/config/default/osal/osal_impl_basic.h:
+../src/config/default/osal/osal_freertos.h:
 
-../src/config/default/system/int/sys_int.h:
+../src/third_party/rtos/FreeRTOS/Source/include/FreeRTOS.h:
 
-../src/config/default/system/int/sys_int_mapping.h:
+../src/config/default/FreeRTOSConfig.h:
+
+../src/third_party/rtos/FreeRTOS/Source/include/projdefs.h:
+
+../src/third_party/rtos/FreeRTOS/Source/include/portable.h:
+
+../src/third_party/rtos/FreeRTOS/Source/include/deprecated_definitions.h:
+
+../src/third_party/rtos/FreeRTOS/Source/portable/GCC/SAM/ARM_CM4F/portmacro.h:
+
+../src/third_party/rtos/FreeRTOS/Source/include/mpu_wrappers.h:
+
+../src/third_party/rtos/FreeRTOS/Source/include/queue.h:
+
+../src/third_party/rtos/FreeRTOS/Source/include/task.h:
+
+../src/third_party/rtos/FreeRTOS/Source/include/list.h:
+
+../src/third_party/rtos/FreeRTOS/Source/include/semphr.h:
+
+../src/third_party/rtos/FreeRTOS/Source/include/queue.h:
+
+../src/third_party/rtos/FreeRTOS/Source/include/task.h:

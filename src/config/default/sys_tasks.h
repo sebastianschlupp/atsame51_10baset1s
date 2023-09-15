@@ -52,5 +52,18 @@
 #include "configuration.h"
 #include "definitions.h"
 
+// *****************************************************************************
+// *****************************************************************************
+// Section: RTOS "Tasks" Handles
+// *****************************************************************************
+// *****************************************************************************
+/* Declaration of  APP_Tasks task handle */
+extern TaskHandle_t xAPP_Tasks;
+
+
+/* Declaration of SYS_COMMAND task handle */
+extern TaskHandle_t xSYS_CMD_Tasks;
+
+
 
 #endif //SYS_TASKS_H

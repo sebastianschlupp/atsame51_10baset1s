@@ -136,10 +136,22 @@ build/default/debug/_ext/1360937237/main.o: ../src/main.c \
  ../src/config/default/driver/spi/drv_spi_definitions.h \
  ../src/config/default/driver/driver.h \
  ../src/config/default/driver/spi/src/drv_spi_local.h \
- ../src/config/default/driver/spi/drv_spi.h \
  ../src/config/default/osal/osal.h \
  ../src/config/default/osal/osal_definitions.h \
- ../src/config/default/osal/osal_impl_basic.h \
+ ../src/config/default/osal/osal_freertos.h \
+ ../src/third_party/rtos/FreeRTOS/Source/include/FreeRTOS.h \
+ ../src/config/default/FreeRTOSConfig.h \
+ ../src/third_party/rtos/FreeRTOS/Source/include/projdefs.h \
+ ../src/third_party/rtos/FreeRTOS/Source/include/portable.h \
+ ../src/third_party/rtos/FreeRTOS/Source/include/deprecated_definitions.h \
+ ../src/third_party/rtos/FreeRTOS/Source/portable/GCC/SAM/ARM_CM4F/portmacro.h \
+ ../src/third_party/rtos/FreeRTOS/Source/include/mpu_wrappers.h \
+ ../src/third_party/rtos/FreeRTOS/Source/include/queue.h \
+ ../src/third_party/rtos/FreeRTOS/Source/include/task.h \
+ ../src/third_party/rtos/FreeRTOS/Source/include/list.h \
+ ../src/third_party/rtos/FreeRTOS/Source/include/semphr.h \
+ ../src/third_party/rtos/FreeRTOS/Source/include/queue.h \
+ ../src/third_party/rtos/FreeRTOS/Source/include/task.h \
  ../src/config/default/library/tcpip/tcpip.h \
  ../src/config/default/library/tcpip/tcpip_common_ports.h \
  ../src/config/default/library/tcpip/tcpip_manager.h \
@@ -169,6 +181,8 @@ build/default/debug/_ext/1360937237/main.o: ../src/main.c \
  ../src/config/default/system/debug/sys_debug.h \
  ../src/config/default/system/console/sys_console.h \
  ../src/config/default/system/console/src/sys_console_local.h \
+ ../src/config/default/peripheral/sercom/i2c_master/plib_sercom2_i2c_master.h \
+ ../src/config/default/peripheral/sercom/i2c_master/plib_sercom_i2c_master_common.h \
  ../src/config/default/peripheral/sercom/spi_master/plib_sercom1_spi_master.h \
  ../src/config/default/peripheral/sercom/spi_master/plib_sercom_spi_master_common.h \
  ../src/config/default/peripheral/evsys/plib_evsys.h \
@@ -186,7 +200,7 @@ build/default/debug/_ext/1360937237/main.o: ../src/main.c \
  ../src/config/default/peripheral/tcc/plib_tcc_common.h \
  ../src/config/default/system/console/sys_console.h \
  ../src/config/default/system/console/src/sys_console_uart_definitions.h \
- ../src/app.h ../src/userapp.h
+ ../src/app.h
 
 ../src/config/default/definitions.h:
 
@@ -466,13 +480,37 @@ build/default/debug/_ext/1360937237/main.o: ../src/main.c \
 
 ../src/config/default/driver/spi/src/drv_spi_local.h:
 
-../src/config/default/driver/spi/drv_spi.h:
-
 ../src/config/default/osal/osal.h:
 
 ../src/config/default/osal/osal_definitions.h:
 
-../src/config/default/osal/osal_impl_basic.h:
+../src/config/default/osal/osal_freertos.h:
+
+../src/third_party/rtos/FreeRTOS/Source/include/FreeRTOS.h:
+
+../src/config/default/FreeRTOSConfig.h:
+
+../src/third_party/rtos/FreeRTOS/Source/include/projdefs.h:
+
+../src/third_party/rtos/FreeRTOS/Source/include/portable.h:
+
+../src/third_party/rtos/FreeRTOS/Source/include/deprecated_definitions.h:
+
+../src/third_party/rtos/FreeRTOS/Source/portable/GCC/SAM/ARM_CM4F/portmacro.h:
+
+../src/third_party/rtos/FreeRTOS/Source/include/mpu_wrappers.h:
+
+../src/third_party/rtos/FreeRTOS/Source/include/queue.h:
+
+../src/third_party/rtos/FreeRTOS/Source/include/task.h:
+
+../src/third_party/rtos/FreeRTOS/Source/include/list.h:
+
+../src/third_party/rtos/FreeRTOS/Source/include/semphr.h:
+
+../src/third_party/rtos/FreeRTOS/Source/include/queue.h:
+
+../src/third_party/rtos/FreeRTOS/Source/include/task.h:
 
 ../src/config/default/library/tcpip/tcpip.h:
 
@@ -532,6 +570,10 @@ build/default/debug/_ext/1360937237/main.o: ../src/main.c \
 
 ../src/config/default/system/console/src/sys_console_local.h:
 
+../src/config/default/peripheral/sercom/i2c_master/plib_sercom2_i2c_master.h:
+
+../src/config/default/peripheral/sercom/i2c_master/plib_sercom_i2c_master_common.h:
+
 ../src/config/default/peripheral/sercom/spi_master/plib_sercom1_spi_master.h:
 
 ../src/config/default/peripheral/sercom/spi_master/plib_sercom_spi_master_common.h:
@@ -567,5 +609,3 @@ build/default/debug/_ext/1360937237/main.o: ../src/main.c \
 ../src/config/default/system/console/src/sys_console_uart_definitions.h:
 
 ../src/app.h:
-
-../src/userapp.h:

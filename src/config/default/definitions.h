@@ -66,6 +66,7 @@
 #include "system/reset/sys_reset.h"
 #include "osal/osal.h"
 #include "system/debug/sys_debug.h"
+#include "peripheral/sercom/i2c_master/plib_sercom2_i2c_master.h"
 #include "peripheral/sercom/spi_master/plib_sercom1_spi_master.h"
 #include "peripheral/evsys/plib_evsys.h"
 #include "system/command/sys_command.h"
@@ -80,8 +81,10 @@
 #include "peripheral/tcc/plib_tcc0.h"
 #include "system/console/sys_console.h"
 #include "system/console/src/sys_console_uart_definitions.h"
+#include "FreeRTOS.h"
+#include "task.h"
 #include "app.h"
-#include "userapp.h"
+
 
 
 // DOM-IGNORE-BEGIN

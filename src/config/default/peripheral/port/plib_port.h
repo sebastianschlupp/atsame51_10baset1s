@@ -91,6 +91,14 @@
 #define PWM2_Get()               (((PORT_REGS->GROUP[0].PORT_IN >> 11U)) & 0x01U)
 #define PWM2_PIN                  PORT_PIN_PA11
 
+/*** Macros for I2C_SDA pin ***/
+#define I2C_SDA_Get()               (((PORT_REGS->GROUP[0].PORT_IN >> 12U)) & 0x01U)
+#define I2C_SDA_PIN                  PORT_PIN_PA12
+
+/*** Macros for I2C_SCL pin ***/
+#define I2C_SCL_Get()               (((PORT_REGS->GROUP[0].PORT_IN >> 13U)) & 0x01U)
+#define I2C_SCL_PIN                  PORT_PIN_PA13
+
 /*** Macros for LED0 pin ***/
 #define LED0_Set()               (PORT_REGS->GROUP[0].PORT_OUTSET = ((uint32_t)1U << 14U))
 #define LED0_Clear()             (PORT_REGS->GROUP[0].PORT_OUTCLR = ((uint32_t)1U << 14U))

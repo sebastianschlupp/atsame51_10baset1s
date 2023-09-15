@@ -114,9 +114,6 @@ const DRV_LAN865X_Configuration drvLan865xInitData[] = {
 /* SPI Client Objects Pool */
 static DRV_SPI_CLIENT_OBJ drvSPI0ClientObjPool[DRV_SPI_CLIENTS_NUMBER_IDX0];
 
-/* SPI Transfer Objects Pool */
-static DRV_SPI_TRANSFER_OBJ drvSPI0TransferObjPool[DRV_SPI_QUEUE_SIZE_IDX0];
-
 /* SPI PLIB Interface Initialization */
 static const DRV_SPI_PLIB_INTERFACE drvSPI0PlibAPI = {
 
@@ -136,21 +133,6 @@ static const DRV_SPI_PLIB_INTERFACE drvSPI0PlibAPI = {
 static const uint32_t drvSPI0remapDataBits[]= { 0x0, 0x1, 0xFFFFFFFFU, 0xFFFFFFFFU, 0xFFFFFFFFU, 0xFFFFFFFFU, 0xFFFFFFFFU, 0xFFFFFFFFU, 0xFFFFFFFFU, 0xFFFFFFFFU };
 static const uint32_t drvSPI0remapClockPolarity[] = { 0x0, 0x20000000 };
 static const uint32_t drvSPI0remapClockPhase[] = { 0x10000000, 0x0 };
-
-static const DRV_SPI_INTERRUPT_SOURCES drvSPI0InterruptSources =
-{
-    /* Peripheral has more than one interrupt vectors */
-    .isSingleIntSrc                        = false,
-
-    /* Peripheral interrupt lines */
-    .intSources.multi.spiTxReadyInt      = (int32_t)SERCOM1_0_IRQn,
-    .intSources.multi.spiTxCompleteInt   = (int32_t)SERCOM1_1_IRQn,
-    .intSources.multi.spiRxInt           = (int32_t)SERCOM1_2_IRQn,
-    /* DMA Tx interrupt line */
-    .intSources.multi.dmaTxChannelInt      = (int32_t)DMAC_0_IRQn,
-    /* DMA Rx interrupt line */
-    .intSources.multi.dmaRxChannelInt      = (int32_t)DMAC_1_IRQn,
-};
 
 /* SPI Driver Initialization Data */
 static const DRV_SPI_INIT drvSPI0InitData =
@@ -182,14 +164,6 @@ static const DRV_SPI_INIT drvSPI0InitData =
     /* SPI Receive Register */
     .spiReceiveAddress  = (void *)&(SERCOM1_REGS->SPIM.SERCOM_DATA),
 
-    /* SPI Queue Size */
-    .transferObjPoolSize = DRV_SPI_QUEUE_SIZE_IDX0,
-
-    /* SPI Transfer Objects Pool */
-    .transferObjPool = (uintptr_t)&drvSPI0TransferObjPool[0],
-
-    /* SPI interrupt sources (SPI peripheral and DMA) */
-    .interruptSources = &drvSPI0InterruptSources,
 };
 // </editor-fold>
 
@@ -495,6 +469,8 @@ void SYS_Initialize ( void* data )
     TC0_TimerInitialize();
 
     ADC0_Initialize();
+    SERCOM2_I2C_Initialize();
+
     SERCOM1_SPI_Initialize();
 
     EVSYS_Initialize();
@@ -551,7 +527,7 @@ void SYS_Initialize ( void* data )
 
     NVIC_Initialize();
 
-    USER_Initialize();
+
     /* MISRAC 2012 deviation block end */
 }
 
