@@ -96,12 +96,12 @@ extern "C" {
 
 #define SYS_CMD_ENABLE
 #define SYS_CMD_DEVICE_MAX_INSTANCES       SYS_CONSOLE_DEVICE_MAX_INSTANCES
-#define SYS_CMD_PRINT_BUFFER_SIZE          1024U
+#define SYS_CMD_PRINT_BUFFER_SIZE          1000U
 #define SYS_CMD_BUFFER_DMA_READY
 
 /* Command System Service RTOS Configurations*/
-#define SYS_CMD_RTOS_STACK_SIZE                256
-#define SYS_CMD_RTOS_TASK_PRIORITY             1
+#define SYS_CMD_RTOS_STACK_SIZE                768
+#define SYS_CMD_RTOS_TASK_PRIORITY             2
 
 
 #define SYS_DEBUG_ENABLE
@@ -160,6 +160,7 @@ extern "C" {
 #define DRV_SPI_DMA_MODE
 #define DRV_SPI_XMIT_DMA_CH_IDX0              SYS_DMA_CHANNEL_0
 #define DRV_SPI_RCV_DMA_CH_IDX0               SYS_DMA_CHANNEL_1
+#define DRV_SPI_QUEUE_SIZE_IDX0               1
 
 
 
@@ -204,6 +205,27 @@ extern "C" {
 #define TCPIP_STACK_COMMANDS_ICMP_ECHO_TIMEOUT          5000
 #define TCPIP_STACK_COMMANDS_ICMP_ECHO_REQUEST_BUFF_SIZE    2000
 #define TCPIP_STACK_COMMANDS_ICMP_ECHO_REQUEST_DATA_SIZE    100
+
+/******************************************************************************/
+/*wolfSSL TLS Layer Configuration*/
+/******************************************************************************/
+
+#define WOLFSSL_ALT_NAMES
+#define WOLFSSL_DER_LOAD
+#define KEEP_OUR_CERT
+#define KEEP_PEER_CERT
+#define HAVE_CRL_IO
+#define HAVE_IO_TIMEOUT
+#define TFM_NO_ASM
+#define WOLFSSL_NO_ASM
+#define SIZEOF_LONG_LONG 8
+#define WOLFSSL_USER_IO
+#define NO_WRITEV
+#define MICROCHIP_TCPIP
+#define WOLFSSL_DTLS
+#define NO_PWDBASED
+#define NO_ERROR_STRINGS
+#define NO_OLD_TLS
 
 
 /*** TCP Configuration ***/
@@ -256,7 +278,7 @@ extern "C" {
 /* Network Configuration Index 0 */
 #define TCPIP_NETWORK_DEFAULT_INTERFACE_NAME_IDX0 "LAN865x"
 
-#define TCPIP_NETWORK_DEFAULT_HOST_NAME_IDX0              "MCHP_LAN865x_Node0"
+#define TCPIP_NETWORK_DEFAULT_HOST_NAME_IDX0              "MCHP_LAN865x"
 #define TCPIP_NETWORK_DEFAULT_MAC_ADDR_IDX0               "00:04:25:1C:A0:00"
 
 #define TCPIP_NETWORK_DEFAULT_IP_ADDRESS_IDX0         "192.168.100.10"
@@ -284,6 +306,12 @@ extern "C" {
 #define TCPIP_IPERF_MAX_INSTANCES       1
 #define TCPIP_IPERF_TX_BW_LIMIT  		10
 
+
+
+/*** Berkeley API Configuration ***/
+#define TCPIP_STACK_USE_BERKELEY_API
+#define MAX_BSD_SOCKETS 					4
+#define TCPIP_STACK_USE_BERKELEY_API
 
 
 /*** IPv4 Configuration ***/
@@ -330,7 +358,7 @@ extern "C" {
 #define TCPIP_STACK_USE_TCP
 #define TCPIP_STACK_USE_UDP
 
-#define TCPIP_STACK_TICK_RATE		        		5
+#define TCPIP_STACK_TICK_RATE		        		1
 #define TCPIP_STACK_SECURE_PORT_ENTRIES             10
 #define TCPIP_STACK_LINK_RATE		        		333
 
@@ -385,7 +413,6 @@ extern "C" {
 #define NO_PWDBASED
 #define HAVE_MCAPI
 #define WOLF_CRYPTO_CB  // provide call-back support
-#define WOLFCRYPT_ONLY
 // ---------- FUNCTIONAL CONFIGURATION START ----------
 #define WOLFSSL_AES_SMALL_TABLES
 #define NO_MD4
@@ -417,6 +444,16 @@ extern "C" {
 #define NO_ERROR_STRINGS
 #define NO_WOLFSSL_MEMORY
 // ---------- FUNCTIONAL CONFIGURATION END ----------
+
+/* MPLAB Harmony Net Presentation Layer Definitions*/
+#define NET_PRES_NUM_INSTANCE 1
+#define NET_PRES_NUM_SOCKETS 10
+
+/* Net Pres RTOS Configurations*/
+#define NET_PRES_RTOS_STACK_SIZE                1024
+#define NET_PRES_RTOS_TASK_PRIORITY             1
+	
+
 
 #define TCPIP_STACK_NETWORK_INTERAFCE_COUNT  	1
 

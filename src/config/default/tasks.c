@@ -66,7 +66,6 @@ void _TCPIP_STACK_Task(  void *pvParameters  )
     while(1)
     {
         TCPIP_STACK_Task(sysObj.tcpip);
-        vTaskDelay(1 / portTICK_PERIOD_MS);
     }
 }
 
@@ -78,6 +77,18 @@ static void lAPP_Tasks(  void *pvParameters  )
     while(true)
     {
         APP_Tasks();
+        vTaskDelay(1U / portTICK_PERIOD_MS);
+    }
+}
+/* Handle for the APP1_Tasks. */
+TaskHandle_t xAPP1_Tasks;
+
+static void lAPP1_Tasks(  void *pvParameters  )
+{   
+    while(true)
+    {
+        APP1_Tasks();
+        vTaskDelay(1U / portTICK_PERIOD_MS);
     }
 }
 
@@ -91,6 +102,16 @@ void lSYS_CMD_Tasks(  void *pvParameters  )
     }
 }
 
+
+
+void _NET_PRES_Tasks(  void *pvParameters  )
+{
+    while(1)
+    {
+        NET_PRES_Tasks(sysObj.netPres);
+        vTaskDelay(1 / portTICK_PERIOD_MS);
+    }
+}
 
 
 
@@ -139,15 +160,33 @@ void SYS_Tasks ( void )
 
 
 
+    xTaskCreate( _NET_PRES_Tasks,
+        "NET_PRES_Tasks",
+        NET_PRES_RTOS_STACK_SIZE,
+        (void*)NULL,
+        NET_PRES_RTOS_TASK_PRIORITY,
+        (TaskHandle_t*)NULL
+    );
+
+
+
 
     /* Maintain the application's state machine. */
         /* Create OS Thread for APP_Tasks. */
     (void) xTaskCreate((TaskFunction_t) lAPP_Tasks,
                 "APP_Tasks",
-                1024,
+                128,
                 NULL,
                 1,
                 &xAPP_Tasks);
+
+    /* Create OS Thread for APP1_Tasks. */
+    (void) xTaskCreate((TaskFunction_t) lAPP1_Tasks,
+                "APP1_Tasks",
+                128,
+                NULL,
+                1,
+                &xAPP1_Tasks);
 
 
 

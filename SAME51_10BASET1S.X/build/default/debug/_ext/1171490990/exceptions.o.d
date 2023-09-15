@@ -138,6 +138,7 @@ build/default/debug/_ext/1171490990/exceptions.o: \
  ../src/config/default/driver/spi/drv_spi_definitions.h \
  ../src/config/default/driver/driver.h \
  ../src/config/default/driver/spi/src/drv_spi_local.h \
+ ../src/config/default/driver/spi/drv_spi.h \
  ../src/config/default/osal/osal.h \
  ../src/config/default/osal/osal_definitions.h \
  ../src/config/default/osal/osal_freertos.h \
@@ -166,6 +167,7 @@ build/default/debug/_ext/1171490990/exceptions.o: \
  ../src/config/default/library/tcpip/arp.h \
  ../src/config/default/library/tcpip/tcp.h \
  ../src/config/default/library/tcpip/udp.h \
+ ../src/config/default/library/tcpip/berkeley_api.h \
  ../src/config/default/library/tcpip/icmp.h \
  ../src/config/default/library/tcpip/lldp.h \
  ../src/config/default/library/tcpip/iperf.h \
@@ -198,11 +200,19 @@ build/default/debug/_ext/1171490990/exceptions.o: \
  ../src/config/default/peripheral/sercom/usart/plib_sercom_usart_common.h \
  ../src/config/default/peripheral/eic/plib_eic.h \
  ../src/third_party/wolfssl/wolfssl/wolfcrypt/port/pic32/crypt_wolfcryptcb.h \
+ ../src/config/default/net_pres/pres/net_pres.h \
+ ../src/config/default/system_config.h \
+ ../src/config/default/net_pres/pres/net_pres_encryptionproviderapi.h \
+ ../src/config/default/net_pres/pres/net_pres.h \
+ ../src/config/default/net_pres/pres/net_pres_transportapi.h \
+ ../src/config/default/net_pres/pres/net_pres_socketapi.h \
+ ../src/config/default/net_pres/pres/net_pres_socketapiconversion.h \
+ ../src/config/default/net_pres/pres/net_pres_socketapi.h \
  ../src/config/default/peripheral/tcc/plib_tcc0.h \
  ../src/config/default/peripheral/tcc/plib_tcc_common.h \
  ../src/config/default/system/console/sys_console.h \
  ../src/config/default/system/console/src/sys_console_uart_definitions.h \
- ../src/app.h
+ ../src/app.h ../src/app1.h
 
 ../src/config/default/configuration.h:
 
@@ -486,6 +496,8 @@ build/default/debug/_ext/1171490990/exceptions.o: \
 
 ../src/config/default/driver/spi/src/drv_spi_local.h:
 
+../src/config/default/driver/spi/drv_spi.h:
+
 ../src/config/default/osal/osal.h:
 
 ../src/config/default/osal/osal_definitions.h:
@@ -541,6 +553,8 @@ build/default/debug/_ext/1171490990/exceptions.o: \
 ../src/config/default/library/tcpip/tcp.h:
 
 ../src/config/default/library/tcpip/udp.h:
+
+../src/config/default/library/tcpip/berkeley_api.h:
 
 ../src/config/default/library/tcpip/icmp.h:
 
@@ -606,6 +620,22 @@ build/default/debug/_ext/1171490990/exceptions.o: \
 
 ../src/third_party/wolfssl/wolfssl/wolfcrypt/port/pic32/crypt_wolfcryptcb.h:
 
+../src/config/default/net_pres/pres/net_pres.h:
+
+../src/config/default/system_config.h:
+
+../src/config/default/net_pres/pres/net_pres_encryptionproviderapi.h:
+
+../src/config/default/net_pres/pres/net_pres.h:
+
+../src/config/default/net_pres/pres/net_pres_transportapi.h:
+
+../src/config/default/net_pres/pres/net_pres_socketapi.h:
+
+../src/config/default/net_pres/pres/net_pres_socketapiconversion.h:
+
+../src/config/default/net_pres/pres/net_pres_socketapi.h:
+
 ../src/config/default/peripheral/tcc/plib_tcc0.h:
 
 ../src/config/default/peripheral/tcc/plib_tcc_common.h:
@@ -615,3 +645,5 @@ build/default/debug/_ext/1171490990/exceptions.o: \
 ../src/config/default/system/console/src/sys_console_uart_definitions.h:
 
 ../src/app.h:
+
+../src/app1.h:

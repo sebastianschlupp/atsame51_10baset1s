@@ -107,6 +107,30 @@ build/default/debug/_ext/1664057780/wc_dsp.o: \
  ../src/packs/CMSIS/CMSIS/Core/Include/cmsis_compiler.h \
  ../src/third_party/wolfssl/wolfssl/wolfcrypt/settings.h \
  ../src/third_party/wolfssl/wolfssl/wolfcrypt/visibility.h \
+ ../src/config/default/library/tcpip/tcpip.h \
+ ../src/config/default/configuration.h \
+ ../src/config/default/system/system_common.h \
+ ../src/config/default/system/system_module.h \
+ ../src/config/default/system/system_common.h \
+ ../src/config/default/library/tcpip/tcpip_common_ports.h \
+ ../src/config/default/library/tcpip/tcpip_mac.h \
+ ../src/config/default/driver/driver_common.h \
+ ../src/config/default/library/tcpip/tcpip_mac_object.h \
+ ../src/config/default/library/tcpip/tcpip_manager.h \
+ ../src/config/default/library/tcpip/tcpip_heap.h \
+ ../src/config/default/library/tcpip/tcpip_helpers.h \
+ ../src/config/default/library/tcpip/ipv4.h \
+ ../src/config/default/library/tcpip/dhcp.h \
+ ../src/config/default/library/tcpip/dns.h \
+ ../src/config/default/library/tcpip/ipv6.h \
+ ../src/config/default/library/tcpip/arp.h \
+ ../src/config/default/library/tcpip/tcp.h \
+ ../src/config/default/library/tcpip/udp.h \
+ ../src/config/default/library/tcpip/berkeley_api.h \
+ ../src/config/default/library/tcpip/icmp.h \
+ ../src/config/default/library/tcpip/lldp.h \
+ ../src/config/default/library/tcpip/iperf.h \
+ ../src/config/default/library/tcpip/tcpip_commands.h \
  ../src/third_party/wolfssl/wolfssl/wolfcrypt/error-crypt.h \
  ../src/third_party/wolfssl/wolfssl/wolfcrypt/types.h \
  ../src/third_party/wolfssl/wolfssl/wolfcrypt/wc_port.h \
@@ -331,6 +355,54 @@ build/default/debug/_ext/1664057780/wc_dsp.o: \
 ../src/third_party/wolfssl/wolfssl/wolfcrypt/settings.h:
 
 ../src/third_party/wolfssl/wolfssl/wolfcrypt/visibility.h:
+
+../src/config/default/library/tcpip/tcpip.h:
+
+../src/config/default/configuration.h:
+
+../src/config/default/system/system_common.h:
+
+../src/config/default/system/system_module.h:
+
+../src/config/default/system/system_common.h:
+
+../src/config/default/library/tcpip/tcpip_common_ports.h:
+
+../src/config/default/library/tcpip/tcpip_mac.h:
+
+../src/config/default/driver/driver_common.h:
+
+../src/config/default/library/tcpip/tcpip_mac_object.h:
+
+../src/config/default/library/tcpip/tcpip_manager.h:
+
+../src/config/default/library/tcpip/tcpip_heap.h:
+
+../src/config/default/library/tcpip/tcpip_helpers.h:
+
+../src/config/default/library/tcpip/ipv4.h:
+
+../src/config/default/library/tcpip/dhcp.h:
+
+../src/config/default/library/tcpip/dns.h:
+
+../src/config/default/library/tcpip/ipv6.h:
+
+../src/config/default/library/tcpip/arp.h:
+
+../src/config/default/library/tcpip/tcp.h:
+
+../src/config/default/library/tcpip/udp.h:
+
+../src/config/default/library/tcpip/berkeley_api.h:
+
+../src/config/default/library/tcpip/icmp.h:
+
+../src/config/default/library/tcpip/lldp.h:
+
+../src/config/default/library/tcpip/iperf.h:
+
+../src/config/default/library/tcpip/tcpip_commands.h:
 
 ../src/third_party/wolfssl/wolfssl/wolfcrypt/error-crypt.h:
 

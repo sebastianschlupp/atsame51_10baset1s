@@ -78,12 +78,17 @@
 #include "peripheral/sercom/usart/plib_sercom5_usart.h"
 #include "peripheral/eic/plib_eic.h"
 #include "wolfssl/wolfcrypt/port/pic32/crypt_wolfcryptcb.h"
+#include "net_pres/pres/net_pres.h"
+#include "net_pres/pres/net_pres_encryptionproviderapi.h"
+#include "net_pres/pres/net_pres_transportapi.h"
+#include "net_pres/pres/net_pres_socketapi.h"
 #include "peripheral/tcc/plib_tcc0.h"
 #include "system/console/sys_console.h"
 #include "system/console/src/sys_console_uart_definitions.h"
 #include "FreeRTOS.h"
 #include "task.h"
 #include "app.h"
+#include "app1.h"
 
 
 
@@ -227,6 +232,8 @@ typedef struct
     SYS_MODULE_OBJ drvSPI0;
 
     SYS_MODULE_OBJ  sysDebug;
+
+    SYS_MODULE_OBJ  netPres;
 
 
 } SYSTEM_OBJECTS;
