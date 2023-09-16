@@ -62,6 +62,10 @@
          <string>class com.microchip.mcc.harmony.HarmonyModule</string>
       </entry>
       <entry>
+         <string>lib_zlib</string>
+         <string>class com.microchip.mcc.harmony.HarmonyModule</string>
+      </entry>
+      <entry>
          <string>net_Pres</string>
          <string>class com.microchip.mcc.harmony.HarmonyModule</string>
       </entry>
@@ -147,6 +151,10 @@
       </entry>
       <entry>
          <string>tcpipNetConfig_0</string>
+         <string>class com.microchip.mcc.harmony.HarmonyModule</string>
+      </entry>
+      <entry>
+         <string>tcpipSntp</string>
          <string>class com.microchip.mcc.harmony.HarmonyModule</string>
       </entry>
       <entry>
@@ -4711,7 +4719,7 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="!@#harmonyUserData"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;UserData&gt;
   &lt;UserData dnOrder=&quot;0&quot;&gt;
-    &lt;GraphSettings canvasHeight=&quot;1450&quot; canvasWidth=&quot;994&quot; dnOrder=&quot;0&quot;/&gt;
+    &lt;GraphSettings canvasHeight=&quot;1537&quot; canvasWidth=&quot;994&quot; dnOrder=&quot;0&quot;/&gt;
     &lt;ComponentGraph dnOrder=&quot;1&quot; id=&quot;APPLICATION LAYER&quot;/&gt;
     &lt;ComponentGraph dnOrder=&quot;2&quot; id=&quot;BASIC CONFIGURATION&quot;/&gt;
     &lt;ComponentGraph dnOrder=&quot;3&quot; id=&quot;DATA LINK LAYER&quot;/&gt;
@@ -4721,12 +4729,12 @@
     &lt;ComponentGraph dnOrder=&quot;7&quot; id=&quot;TRANSPORT LAYER&quot;/&gt;
     &lt;ComponentGraph dnOrder=&quot;8&quot; id=&quot;__ROOTVIEW&quot;&gt;
       &lt;ElementPositions dnOrder=&quot;0&quot;&gt;
-        &lt;ElementPosition dnOrder=&quot;0&quot; id=&quot;FreeRTOS&quot; x=&quot;340&quot; y=&quot;20&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;1&quot; id=&quot;HarmonyCore&quot; x=&quot;165&quot; y=&quot;20&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;0&quot; id=&quot;FreeRTOS&quot; x=&quot;223&quot; y=&quot;19&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;1&quot; id=&quot;HarmonyCore&quot; x=&quot;340&quot; y=&quot;18&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;2&quot; id=&quot;adc0&quot; x=&quot;867&quot; y=&quot;21&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;3&quot; id=&quot;cmsis&quot; x=&quot;30&quot; y=&quot;240&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;4&quot; id=&quot;core&quot; x=&quot;30&quot; y=&quot;200&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;5&quot; id=&quot;dfp&quot; x=&quot;30&quot; y=&quot;160&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;4&quot; id=&quot;core&quot; x=&quot;30&quot; y=&quot;212&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;5&quot; id=&quot;dfp&quot; x=&quot;30&quot; y=&quot;269&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;6&quot; id=&quot;drvExtMacLan865x&quot; x=&quot;445&quot; y=&quot;820&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;7&quot; id=&quot;drv_spi&quot; x=&quot;301&quot; y=&quot;778&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;8&quot; id=&quot;eic&quot; x=&quot;866&quot; y=&quot;176&quot;/&gt;
@@ -4734,29 +4742,31 @@
         &lt;ElementPosition dnOrder=&quot;10&quot; id=&quot;lib_crypto&quot; x=&quot;490&quot; y=&quot;80&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;11&quot; id=&quot;lib_wolfcrypt&quot; x=&quot;230&quot; y=&quot;120&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;12&quot; id=&quot;lib_wolfssl&quot; x=&quot;487&quot; y=&quot;179&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;13&quot; id=&quot;net_Pres&quot; x=&quot;658&quot; y=&quot;165&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;14&quot; id=&quot;nvmctrl&quot; x=&quot;20&quot; y=&quot;20&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;15&quot; id=&quot;sercom1&quot; x=&quot;169&quot; y=&quot;842&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;16&quot; id=&quot;sercom2&quot; x=&quot;865&quot; y=&quot;306&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;17&quot; id=&quot;sercom5&quot; x=&quot;37&quot; y=&quot;535&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;18&quot; id=&quot;sys_command&quot; x=&quot;375&quot; y=&quot;341&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;19&quot; id=&quot;sys_console&quot; x=&quot;168&quot; y=&quot;471&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;20&quot; id=&quot;sys_debug&quot; x=&quot;375&quot; y=&quot;459&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;21&quot; id=&quot;sys_time&quot; x=&quot;166&quot; y=&quot;309&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;22&quot; id=&quot;tc0&quot; x=&quot;36&quot; y=&quot;355&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;23&quot; id=&quot;tc1&quot; x=&quot;865&quot; y=&quot;228&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;24&quot; id=&quot;tcc0&quot; x=&quot;866&quot; y=&quot;99&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;25&quot; id=&quot;tcpipArp&quot; x=&quot;330&quot; y=&quot;260&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;26&quot; id=&quot;tcpipBerkeleyApi&quot; x=&quot;635&quot; y=&quot;1250&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;27&quot; id=&quot;tcpipCmd&quot; x=&quot;543&quot; y=&quot;362&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;28&quot; id=&quot;tcpipDns&quot; x=&quot;635&quot; y=&quot;1163&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;29&quot; id=&quot;tcpipIPv4&quot; x=&quot;199&quot; y=&quot;1046&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;30&quot; id=&quot;tcpipIcmp&quot; x=&quot;295&quot; y=&quot;1159&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;31&quot; id=&quot;tcpipIperf&quot; x=&quot;635&quot; y=&quot;1054&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;32&quot; id=&quot;tcpipNetConfig&quot; x=&quot;589&quot; y=&quot;816&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;33&quot; id=&quot;tcpipStack&quot; x=&quot;375&quot; y=&quot;585&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;34&quot; id=&quot;tcpipTcp&quot; x=&quot;467&quot; y=&quot;1141&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;35&quot; id=&quot;tcpipUdp&quot; x=&quot;467&quot; y=&quot;1052&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;13&quot; id=&quot;lib_zlib&quot; x=&quot;113&quot; y=&quot;164&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;14&quot; id=&quot;net_Pres&quot; x=&quot;658&quot; y=&quot;165&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;15&quot; id=&quot;nvmctrl&quot; x=&quot;31&quot; y=&quot;22&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;16&quot; id=&quot;sercom1&quot; x=&quot;169&quot; y=&quot;842&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;17&quot; id=&quot;sercom2&quot; x=&quot;865&quot; y=&quot;306&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;18&quot; id=&quot;sercom5&quot; x=&quot;37&quot; y=&quot;535&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;19&quot; id=&quot;sys_command&quot; x=&quot;375&quot; y=&quot;341&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;20&quot; id=&quot;sys_console&quot; x=&quot;168&quot; y=&quot;471&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;21&quot; id=&quot;sys_debug&quot; x=&quot;375&quot; y=&quot;459&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;22&quot; id=&quot;sys_time&quot; x=&quot;166&quot; y=&quot;309&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;23&quot; id=&quot;tc0&quot; x=&quot;36&quot; y=&quot;355&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;24&quot; id=&quot;tc1&quot; x=&quot;865&quot; y=&quot;228&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;25&quot; id=&quot;tcc0&quot; x=&quot;866&quot; y=&quot;99&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;26&quot; id=&quot;tcpipArp&quot; x=&quot;106&quot; y=&quot;985&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;27&quot; id=&quot;tcpipBerkeleyApi&quot; x=&quot;635&quot; y=&quot;1250&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;28&quot; id=&quot;tcpipCmd&quot; x=&quot;543&quot; y=&quot;362&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;29&quot; id=&quot;tcpipDns&quot; x=&quot;635&quot; y=&quot;1163&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;30&quot; id=&quot;tcpipIPv4&quot; x=&quot;199&quot; y=&quot;1046&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;31&quot; id=&quot;tcpipIcmp&quot; x=&quot;295&quot; y=&quot;1159&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;32&quot; id=&quot;tcpipIperf&quot; x=&quot;635&quot; y=&quot;1054&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;33&quot; id=&quot;tcpipNetConfig&quot; x=&quot;589&quot; y=&quot;816&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;34&quot; id=&quot;tcpipSntp&quot; x=&quot;635&quot; y=&quot;1403&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;35&quot; id=&quot;tcpipStack&quot; x=&quot;375&quot; y=&quot;585&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;36&quot; id=&quot;tcpipTcp&quot; x=&quot;467&quot; y=&quot;1141&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;37&quot; id=&quot;tcpipUdp&quot; x=&quot;467&quot; y=&quot;1052&quot;/&gt;
       &lt;/ElementPositions&gt;
     &lt;/ComponentGraph&gt;
   &lt;/UserData&gt;
@@ -11689,7 +11699,20 @@
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="lib_wolfcrypt" name="!@#harmonyAttachmentState"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;lib_wolfcrypt&gt;
-  &lt;lib_wolfcrypt dnOrder=&quot;0&quot;/&gt;
+  &lt;lib_wolfcrypt dnOrder=&quot;0&quot;&gt;
+    &lt;Attachments dnOrder=&quot;0&quot;&gt;
+      &lt;DirectDependency dnOrder=&quot;0&quot; id=&quot;LIB_WOLFCRYPT_ZLIB_Dependency&quot;&gt;
+        &lt;Attributes dnOrder=&quot;0&quot;&gt;
+          &lt;String dnOrder=&quot;0&quot; id=&quot;targetComponentID&quot;&gt;
+            &lt;Value dnOrder=&quot;0&quot;&gt;lib_zlib&lt;/Value&gt;
+          &lt;/String&gt;
+          &lt;String dnOrder=&quot;1&quot; id=&quot;targetAttachmentID&quot;&gt;
+            &lt;Value dnOrder=&quot;0&quot;&gt;lib_zlib&lt;/Value&gt;
+          &lt;/String&gt;
+        &lt;/Attributes&gt;
+      &lt;/DirectDependency&gt;
+    &lt;/Attachments&gt;
+  &lt;/lib_wolfcrypt&gt;
 &lt;/lib_wolfcrypt&gt;
 </value>
       </entry>
@@ -11833,7 +11856,14 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="lib_wolfcrypt" name="wolfcrypt_aes_cbc_hw"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;lib_wolfcrypt&gt;
   &lt;lib_wolfcrypt dnOrder=&quot;0&quot; id=&quot;wolfcrypt_aes_cbc_hw&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;visible&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
+      &lt;/Boolean&gt;
+    &lt;/Attributes&gt;
+    &lt;Values dnOrder=&quot;1&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;true&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/lib_wolfcrypt&gt;
 &lt;/lib_wolfcrypt&gt;
 </value>
@@ -11896,7 +11926,14 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="lib_wolfcrypt" name="wolfcrypt_aes_ctr_hw"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;lib_wolfcrypt&gt;
   &lt;lib_wolfcrypt dnOrder=&quot;0&quot; id=&quot;wolfcrypt_aes_ctr_hw&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;visible&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
+      &lt;/Boolean&gt;
+    &lt;/Attributes&gt;
+    &lt;Values dnOrder=&quot;1&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;true&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/lib_wolfcrypt&gt;
 &lt;/lib_wolfcrypt&gt;
 </value>
@@ -11914,7 +11951,14 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="lib_wolfcrypt" name="wolfcrypt_aes_ecb_hw"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;lib_wolfcrypt&gt;
   &lt;lib_wolfcrypt dnOrder=&quot;0&quot; id=&quot;wolfcrypt_aes_ecb_hw&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;visible&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
+      &lt;/Boolean&gt;
+    &lt;/Attributes&gt;
+    &lt;Values dnOrder=&quot;1&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;true&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/lib_wolfcrypt&gt;
 &lt;/lib_wolfcrypt&gt;
 </value>
@@ -11932,7 +11976,14 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="lib_wolfcrypt" name="wolfcrypt_aes_gcm_hw"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;lib_wolfcrypt&gt;
   &lt;lib_wolfcrypt dnOrder=&quot;0&quot; id=&quot;wolfcrypt_aes_gcm_hw&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;visible&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
+      &lt;/Boolean&gt;
+    &lt;/Attributes&gt;
+    &lt;Values dnOrder=&quot;1&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;true&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/lib_wolfcrypt&gt;
 &lt;/lib_wolfcrypt&gt;
 </value>
@@ -11941,7 +11992,14 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="lib_wolfcrypt" name="wolfcrypt_aes_hw"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;lib_wolfcrypt&gt;
   &lt;lib_wolfcrypt dnOrder=&quot;0&quot; id=&quot;wolfcrypt_aes_hw&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;visible&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
+      &lt;/Boolean&gt;
+    &lt;/Attributes&gt;
+    &lt;Values dnOrder=&quot;1&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;true&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/lib_wolfcrypt&gt;
 &lt;/lib_wolfcrypt&gt;
 </value>
@@ -12157,7 +12215,9 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="lib_wolfcrypt" name="wolfcrypt_ecc_hw"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;lib_wolfcrypt&gt;
   &lt;lib_wolfcrypt dnOrder=&quot;0&quot; id=&quot;wolfcrypt_ecc_hw&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;true&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/lib_wolfcrypt&gt;
 &lt;/lib_wolfcrypt&gt;
 </value>
@@ -12235,6 +12295,17 @@
 </value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="lib_wolfcrypt" name="wolfcrypt_havezlib"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;lib_wolfcrypt&gt;
+  &lt;lib_wolfcrypt dnOrder=&quot;0&quot; id=&quot;wolfcrypt_havezlib&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;lib_wolfcrypt&quot; value=&quot;true&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/lib_wolfcrypt&gt;
+&lt;/lib_wolfcrypt&gt;
+</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="lib_wolfcrypt" name="wolfcrypt_hc128"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;lib_wolfcrypt&gt;
   &lt;lib_wolfcrypt dnOrder=&quot;0&quot; id=&quot;wolfcrypt_hc128&quot;&gt;
@@ -12265,7 +12336,9 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="lib_wolfcrypt" name="wolfcrypt_hw"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;lib_wolfcrypt&gt;
   &lt;lib_wolfcrypt dnOrder=&quot;0&quot; id=&quot;wolfcrypt_hw&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;true&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/lib_wolfcrypt&gt;
 &lt;/lib_wolfcrypt&gt;
 </value>
@@ -12452,7 +12525,9 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="lib_wolfcrypt" name="wolfcrypt_rsa_hw"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;lib_wolfcrypt&gt;
   &lt;lib_wolfcrypt dnOrder=&quot;0&quot; id=&quot;wolfcrypt_rsa_hw&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;true&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/lib_wolfcrypt&gt;
 &lt;/lib_wolfcrypt&gt;
 </value>
@@ -12488,7 +12563,14 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="lib_wolfcrypt" name="wolfcrypt_sha1_hw"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;lib_wolfcrypt&gt;
   &lt;lib_wolfcrypt dnOrder=&quot;0&quot; id=&quot;wolfcrypt_sha1_hw&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;visible&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
+      &lt;/Boolean&gt;
+    &lt;/Attributes&gt;
+    &lt;Values dnOrder=&quot;1&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;true&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/lib_wolfcrypt&gt;
 &lt;/lib_wolfcrypt&gt;
 </value>
@@ -12524,7 +12606,14 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="lib_wolfcrypt" name="wolfcrypt_sha264_hw"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;lib_wolfcrypt&gt;
   &lt;lib_wolfcrypt dnOrder=&quot;0&quot; id=&quot;wolfcrypt_sha264_hw&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;visible&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
+      &lt;/Boolean&gt;
+    &lt;/Attributes&gt;
+    &lt;Values dnOrder=&quot;1&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;true&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/lib_wolfcrypt&gt;
 &lt;/lib_wolfcrypt&gt;
 </value>
@@ -13023,6 +13112,17 @@
   &lt;/lib_wolfssl&gt;
 &lt;/lib_wolfssl&gt;
 </value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="lib_zlib" name="!@#harmonyAttachmentState"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;lib_zlib&gt;
+  &lt;lib_zlib dnOrder=&quot;0&quot;/&gt;
+&lt;/lib_zlib&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="lib_zlib" name="#&amp;__MCC_Group_Parrent_id"/>
+         <value>__ROOTVIEW</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="net_Pres" name="!@#harmonyAttachmentState"/>
@@ -22921,6 +23021,152 @@
 </value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipSntp" name="!@#harmonyAttachmentState"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipSntp&gt;
+  &lt;tcpipSntp dnOrder=&quot;0&quot;/&gt;
+&lt;/tcpipSntp&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipSntp" name="#&amp;__MCC_Group_Parrent_id"/>
+         <value>__ROOTVIEW</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipSntp" name="TCPIP_NTP_DEFAULT_CONNECTION_TYPE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipSntp&gt;
+  &lt;tcpipSntp dnOrder=&quot;0&quot; id=&quot;TCPIP_NTP_DEFAULT_CONNECTION_TYPE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/tcpipSntp&gt;
+&lt;/tcpipSntp&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipSntp" name="TCPIP_NTP_DEFAULT_IF"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipSntp&gt;
+  &lt;tcpipSntp dnOrder=&quot;0&quot; id=&quot;TCPIP_NTP_DEFAULT_IF&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/tcpipSntp&gt;
+&lt;/tcpipSntp&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipSntp" name="TCPIP_NTP_EPOCH"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipSntp&gt;
+  &lt;tcpipSntp dnOrder=&quot;0&quot; id=&quot;TCPIP_NTP_EPOCH&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/tcpipSntp&gt;
+&lt;/tcpipSntp&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipSntp" name="TCPIP_NTP_FAST_QUERY_INTERVAL"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipSntp&gt;
+  &lt;tcpipSntp dnOrder=&quot;0&quot; id=&quot;TCPIP_NTP_FAST_QUERY_INTERVAL&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/tcpipSntp&gt;
+&lt;/tcpipSntp&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipSntp" name="TCPIP_NTP_MAX_STRATUM"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipSntp&gt;
+  &lt;tcpipSntp dnOrder=&quot;0&quot; id=&quot;TCPIP_NTP_MAX_STRATUM&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/tcpipSntp&gt;
+&lt;/tcpipSntp&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipSntp" name="TCPIP_NTP_QUERY_INTERVAL"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipSntp&gt;
+  &lt;tcpipSntp dnOrder=&quot;0&quot; id=&quot;TCPIP_NTP_QUERY_INTERVAL&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/tcpipSntp&gt;
+&lt;/tcpipSntp&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipSntp" name="TCPIP_NTP_REPLY_TIMEOUT"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipSntp&gt;
+  &lt;tcpipSntp dnOrder=&quot;0&quot; id=&quot;TCPIP_NTP_REPLY_TIMEOUT&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/tcpipSntp&gt;
+&lt;/tcpipSntp&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipSntp" name="TCPIP_NTP_RX_QUEUE_LIMIT"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipSntp&gt;
+  &lt;tcpipSntp dnOrder=&quot;0&quot; id=&quot;TCPIP_NTP_RX_QUEUE_LIMIT&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/tcpipSntp&gt;
+&lt;/tcpipSntp&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipSntp" name="TCPIP_NTP_SERVER"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipSntp&gt;
+  &lt;tcpipSntp dnOrder=&quot;0&quot; id=&quot;TCPIP_NTP_SERVER&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/tcpipSntp&gt;
+&lt;/tcpipSntp&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipSntp" name="TCPIP_NTP_SERVER_MAX_LENGTH"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipSntp&gt;
+  &lt;tcpipSntp dnOrder=&quot;0&quot; id=&quot;TCPIP_NTP_SERVER_MAX_LENGTH&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/tcpipSntp&gt;
+&lt;/tcpipSntp&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipSntp" name="TCPIP_NTP_STRING_VERSION"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipSntp&gt;
+  &lt;tcpipSntp dnOrder=&quot;0&quot; id=&quot;TCPIP_NTP_STRING_VERSION&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/tcpipSntp&gt;
+&lt;/tcpipSntp&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipSntp" name="TCPIP_NTP_TASK_TICK_RATE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipSntp&gt;
+  &lt;tcpipSntp dnOrder=&quot;0&quot; id=&quot;TCPIP_NTP_TASK_TICK_RATE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/tcpipSntp&gt;
+&lt;/tcpipSntp&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipSntp" name="TCPIP_NTP_TIME_STAMP_TMO"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipSntp&gt;
+  &lt;tcpipSntp dnOrder=&quot;0&quot; id=&quot;TCPIP_NTP_TIME_STAMP_TMO&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/tcpipSntp&gt;
+&lt;/tcpipSntp&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipSntp" name="TCPIP_USE_SNTP_CLIENT"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipSntp&gt;
+  &lt;tcpipSntp dnOrder=&quot;0&quot; id=&quot;TCPIP_USE_SNTP_CLIENT&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/tcpipSntp&gt;
+&lt;/tcpipSntp&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipSntp" name="TCPIP_USE_SNTP_CLIENT_NEEDED"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipSntp&gt;
+  &lt;tcpipSntp dnOrder=&quot;0&quot; id=&quot;TCPIP_USE_SNTP_CLIENT_NEEDED&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/tcpipSntp&gt;
+&lt;/tcpipSntp&gt;
+</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipStack" name="!@#harmonyAttachmentState"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipStack&gt;
   &lt;tcpipStack dnOrder=&quot;0&quot;&gt;
@@ -24164,7 +24410,7 @@
       </entry>
       <entry>
          <file>../src/config/default/configuration.h</file>
-         <hash>f73c8096664404cd01a1ae12aaae19205128d6a5a355a3f2f73dd0fdbcd96e2d</hash>
+         <hash>1baeff3146b39647436b2281c0ae70e5b9b96d8ab325ec9a0e2a2e1e6874b3fb</hash>
       </entry>
       <entry>
          <file>../src/config/default/osal/osal_freertos.h</file>
@@ -24532,7 +24778,7 @@
       </entry>
       <entry>
          <file>../src/config/default/library/tcpip/tcpip.h</file>
-         <hash>c3edaa9811ba4e980f1eaa8993267fa0649c3407ba8f535c14ec77da1bd196ee</hash>
+         <hash>fcd136251e8c1cc850e99ea0f9f1b7538e9518194243e6f7ae0b9b68bc963ace</hash>
       </entry>
       <entry>
          <file>../src/third_party/wolfssl/wolfssl/wolfcrypt/port/pic32/CryptoLib_ZpEccAdd_pb.h</file>
@@ -24911,6 +25157,10 @@
          <hash>c0e2cfc641f9b1450f4aff22d76a2e654cb196b6d1315d189db597ff39c2d893</hash>
       </entry>
       <entry>
+         <file>../src/config/default/library/tcpip/src/sntp.c</file>
+         <hash>e1ee2dbc0a7a9bd9de149364ea5ad7b2e05c9b62754d47f06826dc54ab6ac2fc</hash>
+      </entry>
+      <entry>
          <file>../src/third_party/wolfssl/wolfssl/wolfcrypt/port/pic32/crypt_sha1_hw.h</file>
          <hash>07f41be389d3712cd2cee73ae23643e17aa84c2b11f5e85a1e5b73d6800981a2</hash>
       </entry>
@@ -24928,7 +25178,7 @@
       </entry>
       <entry>
          <file>../src/config/default/initialization.c</file>
-         <hash>c5fc6c36e6efa389717ec8773438827b58b150e9eebf1f517f852597b3cf0016</hash>
+         <hash>9337cda8e92d421cabf4673d3ec42bc54347f042db8b1fd94ef0849c644fda35</hash>
       </entry>
       <entry>
          <file>../src/config/default/library/tcpip/src/iperf.c</file>
@@ -25844,7 +26094,7 @@
       </entry>
       <entry>
          <file>../src/config/default/library/tcpip/src/tcpip_private.h</file>
-         <hash>9480a248cf9dba68193657f1cc8bfe98182480407972981ec8246e8d9ab9f746</hash>
+         <hash>db7fb6af07b902342af04c6ded4e454354d382608555d312ebf111e84e42a61e</hash>
       </entry>
       <entry>
          <file>../src/config/default/library/tcpip/src/iperf_manager.h</file>

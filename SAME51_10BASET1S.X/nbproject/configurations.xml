@@ -668,6 +668,7 @@
                 <itemPath>../src/config/default/library/tcpip/src/ipv4.c</itemPath>
                 <itemPath>../src/config/default/library/tcpip/src/dns.c</itemPath>
                 <itemPath>../src/config/default/library/tcpip/src/tcpip_heap_alloc.c</itemPath>
+                <itemPath>../src/config/default/library/tcpip/src/sntp.c</itemPath>
               </logicalFolder>
             </logicalFolder>
           </logicalFolder>

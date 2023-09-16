@@ -128,6 +128,7 @@ build/default/debug/_ext/1664057780/wc_dsp.o: \
  ../src/config/default/library/tcpip/udp.h \
  ../src/config/default/library/tcpip/berkeley_api.h \
  ../src/config/default/library/tcpip/icmp.h \
+ ../src/config/default/library/tcpip/sntp.h \
  ../src/config/default/library/tcpip/lldp.h \
  ../src/config/default/library/tcpip/iperf.h \
  ../src/config/default/library/tcpip/tcpip_commands.h \
@@ -397,6 +398,8 @@ build/default/debug/_ext/1664057780/wc_dsp.o: \
 ../src/config/default/library/tcpip/berkeley_api.h:
 
 ../src/config/default/library/tcpip/icmp.h:
+
+../src/config/default/library/tcpip/sntp.h:
 
 ../src/config/default/library/tcpip/lldp.h:
 

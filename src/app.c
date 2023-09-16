@@ -140,6 +140,7 @@ void APP_Tasks ( void )
         default:
         {
             /* TODO: Handle error in application's state machine. */
+            SYS_DEBUG_PRINT(SYS_ERROR_ERROR, "Error code: %u",SYS_USER_ERROR_UNDEFINEDSTATE);
             break;
         }
     }

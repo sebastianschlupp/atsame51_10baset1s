@@ -170,6 +170,7 @@ build/default/production/_ext/1171490990/interrupts.o: \
  ../src/config/default/library/tcpip/udp.h \
  ../src/config/default/library/tcpip/berkeley_api.h \
  ../src/config/default/library/tcpip/icmp.h \
+ ../src/config/default/library/tcpip/sntp.h \
  ../src/config/default/library/tcpip/lldp.h \
  ../src/config/default/library/tcpip/iperf.h \
  ../src/config/default/library/tcpip/tcpip_commands.h \
@@ -213,7 +214,7 @@ build/default/production/_ext/1171490990/interrupts.o: \
  ../src/config/default/peripheral/tcc/plib_tcc_common.h \
  ../src/config/default/system/console/sys_console.h \
  ../src/config/default/system/console/src/sys_console_uart_definitions.h \
- ../src/app.h ../src/app1.h
+ ../src/app.h ../src/config/default/definitions.h ../src/app1.h
 
 ../src/config/default/configuration.h:
 
@@ -561,6 +562,8 @@ build/default/production/_ext/1171490990/interrupts.o: \
 
 ../src/config/default/library/tcpip/icmp.h:
 
+../src/config/default/library/tcpip/sntp.h:
+
 ../src/config/default/library/tcpip/lldp.h:
 
 ../src/config/default/library/tcpip/iperf.h:
@@ -648,5 +651,7 @@ build/default/production/_ext/1171490990/interrupts.o: \
 ../src/config/default/system/console/src/sys_console_uart_definitions.h:
 
 ../src/app.h:
+
+../src/config/default/definitions.h:
 
 ../src/app1.h:

@@ -238,6 +238,35 @@ typedef struct
 
 } SYSTEM_OBJECTS;
 
+typedef enum{
+    //Default state
+    SYS_USER_ERROR_NOERROR = 0x00U,
+    //Error flags related to unsuitable input values 0x10
+    SYS_USER_ERROR_GENERICINPUTVALUEFAULT = 0x10U,
+    SYS_USER_ERROR_INPNOTINRANGE = 0x11U, //the input values are not within the range required for the function to work properly
+    SYS_USER_ERROR_12 = 0x12U,
+    SYS_USER_ERROR_13 = 0x13U,
+    SYS_USER_ERROR_14 = 0x14U,
+    SYS_USER_ERROR_15 = 0x15U,
+    //Error flags related to ... 2x
+            
+    //Error flags related to interrupt handling 3x
+    SYS_USER_ERROR_GENERICINTFAULT = 0x30U,
+    SYS_USER_ERROR_INTFLAGNOTHANDLED = 0x31U, //the interrupt is setting a flag that has to be reset in the function that handles it
+
+    //Error flags related to ADC handling 4x
+    SYS_USER_ERROR_GENERICADCFAULT = 0x30U,
+    SYS_USER_ERROR_ADCCONVERSIONFAULT = 0x31U, //after a conversion is started, this flag will be set until the conversion is done. This way we don't need a while loop blocking all code execution to know when the result is done.
+    //Error flags related to ... 5x
+    SYS_USER_ERROR_55 = 0x55U,
+            
+    //Error flags related to Networking 8x
+    SYS_USER_ERROR_ = 0x80U,        
+    //Error flags related to RTOS Tasks 9x
+    SYS_USER_ERROR_UNDEFINEDSTATE = 0x90U,
+            
+} SYS_USER_ERROR_FLAGS;
+
 // *****************************************************************************
 // *****************************************************************************
 // Section: extern declarations
