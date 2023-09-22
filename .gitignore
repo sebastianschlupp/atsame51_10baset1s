@@ -48,3 +48,7 @@ Thumbs.db
 *.mov
 *.wmv
 
+# Build outputs
+SAME51_10BASET1S.X/build
+SAME51_10BASET1S.X/debug
+SAME51_10BASET1S.X/dist
