@@ -32,6 +32,7 @@
 #include <stddef.h>
 #include <stdlib.h>
 #include "configuration.h"
+#include "definitions.h"
 
 // DOM-IGNORE-BEGIN
 #ifdef __cplusplus  // Provide C++ Compatibility
@@ -41,6 +42,8 @@ extern "C" {
 #endif
 // DOM-IGNORE-END
 
+#define SERVER_PORT 9760
+    
 // *****************************************************************************
 // *****************************************************************************
 // Section: Type Definitions
@@ -61,8 +64,13 @@ extern "C" {
 typedef enum
 {
     /* Application's state machine's initial state. */
-    APP1_STATE_INIT=0,
-    APP1_STATE_SERVICE_TASKS,
+    APP1_TCPIP_WAIT_INIT=0,
+    APP1_TCPIP_ERROR=1,
+    APP1_TCPIP_WAIT_FOR_IP=2,
+    APP1_BSD_CREATE_SOCKET=3,
+    APP1_BSD_BIND=4,
+    APP1_TCPIP_SERVING_CONNECTION=5,
+    APP1_TCPIP_CLOSING_CONNECTION=6            
     /* TODO: Define states used by the application state machine. */
 
 } APP1_STATES;
@@ -85,7 +93,7 @@ typedef struct
 {
     /* The application's current state */
     APP1_STATES state;
-
+    SOCKET socket;
     /* TODO: Define any additional data used by the application. */
 
 } APP1_DATA;

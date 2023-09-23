@@ -89,6 +89,7 @@
 #include "task.h"
 #include "app.h"
 #include "app1.h"
+#include <errno.h>
 
 
 
@@ -238,7 +239,8 @@ typedef struct
 
 } SYSTEM_OBJECTS;
 
-typedef enum{
+typedef enum
+{
     //Default state
     SYS_USER_ERROR_NOERROR = 0x00U,
     //Error flags related to unsuitable input values 0x10
@@ -261,7 +263,12 @@ typedef enum{
     SYS_USER_ERROR_55 = 0x55U,
             
     //Error flags related to Networking 8x
-    SYS_USER_ERROR_ = 0x80U,        
+    SYS_USER_ERROR_ = 0x80U, //Error creating socket
+    //SYS_USER_ERROR_ = 0x81U, //Error creating socket
+    //SYS_USER_ERROR_ = 0x82U, //Error creating socket
+    //SYS_USER_ERROR_ = 0x83U, //Error creating socket
+    //SYS_USER_ERROR_ = 0x84U, //Error creating socket
+
     //Error flags related to RTOS Tasks 9x
     SYS_USER_ERROR_UNDEFINEDSTATE = 0x90U,
             
