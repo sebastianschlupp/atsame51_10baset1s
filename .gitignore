@@ -49,7 +49,5 @@ Thumbs.db
 *.wmv
 
 # Build outputs
-SAME51_10BASET1S.X/build/**
-SAME51_10BASET1S.X/debug/**
-SAME51_10BASET1S.X/dist/**
-SAME51_10BASET1S.X/nbproject/**
+SAME51_10BASET1S.X/**
+SAME51_10BASET1S.mc3.*
