@@ -52,5 +52,21 @@
 #include "configuration.h"
 #include "definitions.h"
 
+// *****************************************************************************
+// *****************************************************************************
+// Section: RTOS "Tasks" Handles
+// *****************************************************************************
+// *****************************************************************************
+/* Declaration of  UDP_SERVER_Tasks task handle */
+extern TaskHandle_t xUDP_SERVER_Tasks;
+
+/* Declaration of  UDP_CLIENT_Tasks task handle */
+extern TaskHandle_t xUDP_CLIENT_Tasks;
+
+
+/* Declaration of SYS_COMMAND task handle */
+extern TaskHandle_t xSYS_CMD_Tasks;
+
+
 
 #endif //SYS_TASKS_H

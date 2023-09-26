@@ -110,18 +110,133 @@ build/default/debug/_ext/172253694/crypt_wolfcryptcb.o: \
  ../src/third_party/wolfssl/wolfssl/wolfcrypt/types.h \
  ../src/third_party/wolfssl/wolfssl/wolfcrypt/settings.h \
  ../src/third_party/wolfssl/wolfssl/wolfcrypt/visibility.h \
+ ../src/config/default/library/tcpip/tcpip.h \
+ ../src/config/default/system/system_common.h \
+ ../src/config/default/system/system_module.h \
+ ../src/config/default/system/system_common.h \
+ ../src/config/default/library/tcpip/tcpip_common_ports.h \
+ ../src/config/default/library/tcpip/tcpip_mac.h \
+ ../src/config/default/driver/driver_common.h \
+ ../src/config/default/library/tcpip/tcpip_mac_object.h \
+ ../src/config/default/library/tcpip/tcpip_manager.h \
+ ../src/config/default/library/tcpip/tcpip_heap.h \
+ ../src/config/default/library/tcpip/tcpip_helpers.h \
+ ../src/config/default/library/tcpip/ipv4.h \
+ ../src/config/default/library/tcpip/dhcp.h \
+ ../src/config/default/library/tcpip/dns.h \
+ ../src/config/default/library/tcpip/ipv6.h \
+ ../src/config/default/library/tcpip/arp.h \
+ ../src/config/default/library/tcpip/tcp.h \
+ ../src/config/default/library/tcpip/udp.h \
+ ../src/config/default/library/tcpip/berkeley_api.h \
+ ../src/config/default/library/tcpip/icmp.h \
+ ../src/config/default/library/tcpip/sntp.h \
+ ../src/config/default/library/tcpip/lldp.h \
+ ../src/config/default/library/tcpip/iperf.h \
+ ../src/config/default/library/tcpip/tcpip_commands.h \
  ../src/third_party/wolfssl/wolfssl/wolfcrypt/wc_port.h \
  ../src/third_party/wolfssl/wolfssl/wolfcrypt/rsa.h \
  ../src/third_party/wolfssl/wolfssl/wolfcrypt/integer.h \
  ../src/third_party/wolfssl/wolfssl/wolfcrypt/tfm.h \
  ../src/third_party/wolfssl/wolfssl/wolfcrypt/random.h \
  ../src/third_party/wolfssl/wolfssl/wolfcrypt/sha256.h \
+ ../src/third_party/wolfssl/wolfssl/wolfcrypt/port/pic32/crypt_sha256_hw.h \
+ ../src/third_party/wolfssl/wolfssl/wolfcrypt/port/pic32/crypt_sha_sam11105.h \
+ ../src/config/default/definitions.h \
+ ../src/config/default/crypto/crypto.h \
+ ../src/config/default/peripheral/nvmctrl/plib_nvmctrl.h \
+ ../src/config/default/device.h \
+ ../src/config/default/peripheral/tc/plib_tc1.h \
+ ../src/config/default/peripheral/tc/plib_tc_common.h \
+ ../src/config/default/peripheral/tc/plib_tc0.h \
+ ../src/config/default/driver/lan865x/drv_lan865x.h \
+ ../src/config/default/driver/spi/drv_spi_definitions.h \
+ ../src/config/default/system/int/sys_int.h \
+ ../src/config/default/system/int/sys_int_mapping.h \
+ ../src/config/default/system/ports/sys_ports.h \
+ ../src/config/default/system/ports/sys_ports_mapping.h \
+ ../src/config/default/peripheral/port/plib_port.h \
+ ../src/config/default/system/dma/sys_dma.h \
+ ../src/config/default/system/dma/sys_dma_mapping.h \
+ ../src/config/default/peripheral/dmac/plib_dmac.h \
+ ../src/config/default/library/tcpip/tcpip_ethernet.h \
+ ../src/config/default/system/time/sys_time.h \
+ ../src/config/default/system/system.h \
+ ../src/config/default/system/time/sys_time_definitions.h \
+ ../src/config/default/peripheral/adc/plib_adc0.h \
+ ../src/config/default/peripheral/adc/plib_adc_common.h \
+ ../src/config/default/driver/spi/drv_spi.h \
+ ../src/config/default/driver/spi/drv_spi_definitions.h \
+ ../src/config/default/driver/driver.h \
+ ../src/config/default/driver/spi/src/drv_spi_local.h \
+ ../src/config/default/driver/spi/drv_spi.h \
+ ../src/config/default/osal/osal.h \
+ ../src/config/default/osal/osal_definitions.h \
+ ../src/config/default/osal/osal_freertos.h \
+ ../src/third_party/rtos/FreeRTOS/Source/include/FreeRTOS.h \
+ ../src/config/default/FreeRTOSConfig.h \
+ ../src/third_party/rtos/FreeRTOS/Source/include/projdefs.h \
+ ../src/third_party/rtos/FreeRTOS/Source/include/portable.h \
+ ../src/third_party/rtos/FreeRTOS/Source/include/deprecated_definitions.h \
+ ../src/third_party/rtos/FreeRTOS/Source/portable/GCC/SAM/ARM_CM4F/portmacro.h \
+ ../src/third_party/rtos/FreeRTOS/Source/include/mpu_wrappers.h \
+ ../src/third_party/rtos/FreeRTOS/Source/include/queue.h \
+ ../src/third_party/rtos/FreeRTOS/Source/include/task.h \
+ ../src/third_party/rtos/FreeRTOS/Source/include/list.h \
+ ../src/third_party/rtos/FreeRTOS/Source/include/semphr.h \
+ ../src/third_party/rtos/FreeRTOS/Source/include/queue.h \
+ ../src/third_party/rtos/FreeRTOS/Source/include/task.h \
+ ../src/config/default/library/tcpip/tcpip.h \
+ ../src/config/default/system/sys_time_h2_adapter.h \
+ ../src/config/default/system/time/sys_time.h \
+ ../src/config/default/system/time/sys_time_definitions.h \
+ ../src/config/default/system/sys_random_h2_adapter.h \
+ ../src/config/default/system/int/sys_int.h \
+ ../src/config/default/system/ports/sys_ports.h \
+ ../src/config/default/system/cache/sys_cache.h \
+ ../src/config/default/system/dma/sys_dma.h \
+ ../src/config/default/system/reset/sys_reset.h \
+ ../src/config/default/osal/osal.h \
+ ../src/config/default/system/debug/sys_debug.h \
+ ../src/config/default/system/console/sys_console.h \
+ ../src/config/default/system/console/src/sys_console_local.h \
+ ../src/config/default/peripheral/sercom/i2c_master/plib_sercom2_i2c_master.h \
+ ../src/config/default/peripheral/sercom/i2c_master/plib_sercom_i2c_master_common.h \
+ ../src/config/default/peripheral/sercom/spi_master/plib_sercom1_spi_master.h \
+ ../src/config/default/peripheral/sercom/spi_master/plib_sercom_spi_master_common.h \
+ ../src/config/default/peripheral/evsys/plib_evsys.h \
+ ../src/config/default/system/command/sys_command.h \
+ ../src/config/default/peripheral/port/plib_port.h \
+ ../src/config/default/peripheral/clock/plib_clock.h \
+ ../src/config/default/peripheral/nvic/plib_nvic.h \
+ ../src/config/default/peripheral/dmac/plib_dmac.h \
+ ../src/config/default/peripheral/cmcc/plib_cmcc.h \
+ ../src/config/default/peripheral/sercom/usart/plib_sercom5_usart.h \
+ ../src/config/default/peripheral/sercom/usart/plib_sercom_usart_common.h \
+ ../src/config/default/peripheral/eic/plib_eic.h \
+ ../src/config/default/net_pres/pres/net_pres.h \
+ ../src/config/default/system_config.h \
+ ../src/config/default/configuration.h \
+ ../src/config/default/net_pres/pres/net_pres_encryptionproviderapi.h \
+ ../src/config/default/net_pres/pres/net_pres.h \
+ ../src/config/default/net_pres/pres/net_pres_transportapi.h \
+ ../src/config/default/net_pres/pres/net_pres_socketapi.h \
+ ../src/config/default/net_pres/pres/net_pres_socketapiconversion.h \
+ ../src/config/default/net_pres/pres/net_pres_socketapi.h \
+ ../src/config/default/peripheral/tcc/plib_tcc0.h \
+ ../src/config/default/peripheral/tcc/plib_tcc_common.h \
+ ../src/config/default/system/console/sys_console.h \
+ ../src/config/default/system/console/src/sys_console_uart_definitions.h \
+ ../src/udp_server.h ../src/udp_client.h \
  ../src/third_party/wolfssl/wolfssl/wolfcrypt/wolfmath.h \
  ../src/third_party/wolfssl/wolfssl/wolfcrypt/hash.h \
  ../src/third_party/wolfssl/wolfssl/wolfcrypt/md5.h \
  ../src/third_party/wolfssl/wolfssl/wolfcrypt/sha.h \
+ ../src/third_party/wolfssl/wolfssl/wolfcrypt/port/pic32/crypt_sha1_hw.h \
  ../src/third_party/wolfssl/wolfssl/wolfcrypt/ecc.h \
  ../src/third_party/wolfssl/wolfssl/wolfcrypt/aes.h \
+ ../src/third_party/wolfssl/wolfssl/wolfcrypt/port/pic32/crypt_aes_hw.h \
+ ../src/third_party/wolfssl/wolfssl/wolfcrypt/port/pic32/crypt_aes_u2238.h \
  ../src/third_party/wolfssl/wolfssl/wolfcrypt/hmac.h \
  ../src/third_party/wolfssl/wolfssl/wolfcrypt/des3.h \
  ../src/third_party/wolfssl/wolfssl/wolfcrypt/error-crypt.h \
@@ -350,6 +465,54 @@ build/default/debug/_ext/172253694/crypt_wolfcryptcb.o: \
 
 ../src/third_party/wolfssl/wolfssl/wolfcrypt/visibility.h:
 
+../src/config/default/library/tcpip/tcpip.h:
+
+../src/config/default/system/system_common.h:
+
+../src/config/default/system/system_module.h:
+
+../src/config/default/system/system_common.h:
+
+../src/config/default/library/tcpip/tcpip_common_ports.h:
+
+../src/config/default/library/tcpip/tcpip_mac.h:
+
+../src/config/default/driver/driver_common.h:
+
+../src/config/default/library/tcpip/tcpip_mac_object.h:
+
+../src/config/default/library/tcpip/tcpip_manager.h:
+
+../src/config/default/library/tcpip/tcpip_heap.h:
+
+../src/config/default/library/tcpip/tcpip_helpers.h:
+
+../src/config/default/library/tcpip/ipv4.h:
+
+../src/config/default/library/tcpip/dhcp.h:
+
+../src/config/default/library/tcpip/dns.h:
+
+../src/config/default/library/tcpip/ipv6.h:
+
+../src/config/default/library/tcpip/arp.h:
+
+../src/config/default/library/tcpip/tcp.h:
+
+../src/config/default/library/tcpip/udp.h:
+
+../src/config/default/library/tcpip/berkeley_api.h:
+
+../src/config/default/library/tcpip/icmp.h:
+
+../src/config/default/library/tcpip/sntp.h:
+
+../src/config/default/library/tcpip/lldp.h:
+
+../src/config/default/library/tcpip/iperf.h:
+
+../src/config/default/library/tcpip/tcpip_commands.h:
+
 ../src/third_party/wolfssl/wolfssl/wolfcrypt/wc_port.h:
 
 ../src/third_party/wolfssl/wolfssl/wolfcrypt/rsa.h:
@@ -362,6 +525,184 @@ build/default/debug/_ext/172253694/crypt_wolfcryptcb.o: \
 
 ../src/third_party/wolfssl/wolfssl/wolfcrypt/sha256.h:
 
+../src/third_party/wolfssl/wolfssl/wolfcrypt/port/pic32/crypt_sha256_hw.h:
+
+../src/third_party/wolfssl/wolfssl/wolfcrypt/port/pic32/crypt_sha_sam11105.h:
+
+../src/config/default/definitions.h:
+
+../src/config/default/crypto/crypto.h:
+
+../src/config/default/peripheral/nvmctrl/plib_nvmctrl.h:
+
+../src/config/default/device.h:
+
+../src/config/default/peripheral/tc/plib_tc1.h:
+
+../src/config/default/peripheral/tc/plib_tc_common.h:
+
+../src/config/default/peripheral/tc/plib_tc0.h:
+
+../src/config/default/driver/lan865x/drv_lan865x.h:
+
+../src/config/default/driver/spi/drv_spi_definitions.h:
+
+../src/config/default/system/int/sys_int.h:
+
+../src/config/default/system/int/sys_int_mapping.h:
+
+../src/config/default/system/ports/sys_ports.h:
+
+../src/config/default/system/ports/sys_ports_mapping.h:
+
+../src/config/default/peripheral/port/plib_port.h:
+
+../src/config/default/system/dma/sys_dma.h:
+
+../src/config/default/system/dma/sys_dma_mapping.h:
+
+../src/config/default/peripheral/dmac/plib_dmac.h:
+
+../src/config/default/library/tcpip/tcpip_ethernet.h:
+
+../src/config/default/system/time/sys_time.h:
+
+../src/config/default/system/system.h:
+
+../src/config/default/system/time/sys_time_definitions.h:
+
+../src/config/default/peripheral/adc/plib_adc0.h:
+
+../src/config/default/peripheral/adc/plib_adc_common.h:
+
+../src/config/default/driver/spi/drv_spi.h:
+
+../src/config/default/driver/spi/drv_spi_definitions.h:
+
+../src/config/default/driver/driver.h:
+
+../src/config/default/driver/spi/src/drv_spi_local.h:
+
+../src/config/default/driver/spi/drv_spi.h:
+
+../src/config/default/osal/osal.h:
+
+../src/config/default/osal/osal_definitions.h:
+
+../src/config/default/osal/osal_freertos.h:
+
+../src/third_party/rtos/FreeRTOS/Source/include/FreeRTOS.h:
+
+../src/config/default/FreeRTOSConfig.h:
+
+../src/third_party/rtos/FreeRTOS/Source/include/projdefs.h:
+
+../src/third_party/rtos/FreeRTOS/Source/include/portable.h:
+
+../src/third_party/rtos/FreeRTOS/Source/include/deprecated_definitions.h:
+
+../src/third_party/rtos/FreeRTOS/Source/portable/GCC/SAM/ARM_CM4F/portmacro.h:
+
+../src/third_party/rtos/FreeRTOS/Source/include/mpu_wrappers.h:
+
+../src/third_party/rtos/FreeRTOS/Source/include/queue.h:
+
+../src/third_party/rtos/FreeRTOS/Source/include/task.h:
+
+../src/third_party/rtos/FreeRTOS/Source/include/list.h:
+
+../src/third_party/rtos/FreeRTOS/Source/include/semphr.h:
+
+../src/third_party/rtos/FreeRTOS/Source/include/queue.h:
+
+../src/third_party/rtos/FreeRTOS/Source/include/task.h:
+
+../src/config/default/library/tcpip/tcpip.h:
+
+../src/config/default/system/sys_time_h2_adapter.h:
+
+../src/config/default/system/time/sys_time.h:
+
+../src/config/default/system/time/sys_time_definitions.h:
+
+../src/config/default/system/sys_random_h2_adapter.h:
+
+../src/config/default/system/int/sys_int.h:
+
+../src/config/default/system/ports/sys_ports.h:
+
+../src/config/default/system/cache/sys_cache.h:
+
+../src/config/default/system/dma/sys_dma.h:
+
+../src/config/default/system/reset/sys_reset.h:
+
+../src/config/default/osal/osal.h:
+
+../src/config/default/system/debug/sys_debug.h:
+
+../src/config/default/system/console/sys_console.h:
+
+../src/config/default/system/console/src/sys_console_local.h:
+
+../src/config/default/peripheral/sercom/i2c_master/plib_sercom2_i2c_master.h:
+
+../src/config/default/peripheral/sercom/i2c_master/plib_sercom_i2c_master_common.h:
+
+../src/config/default/peripheral/sercom/spi_master/plib_sercom1_spi_master.h:
+
+../src/config/default/peripheral/sercom/spi_master/plib_sercom_spi_master_common.h:
+
+../src/config/default/peripheral/evsys/plib_evsys.h:
+
+../src/config/default/system/command/sys_command.h:
+
+../src/config/default/peripheral/port/plib_port.h:
+
+../src/config/default/peripheral/clock/plib_clock.h:
+
+../src/config/default/peripheral/nvic/plib_nvic.h:
+
+../src/config/default/peripheral/dmac/plib_dmac.h:
+
+../src/config/default/peripheral/cmcc/plib_cmcc.h:
+
+../src/config/default/peripheral/sercom/usart/plib_sercom5_usart.h:
+
+../src/config/default/peripheral/sercom/usart/plib_sercom_usart_common.h:
+
+../src/config/default/peripheral/eic/plib_eic.h:
+
+../src/config/default/net_pres/pres/net_pres.h:
+
+../src/config/default/system_config.h:
+
+../src/config/default/configuration.h:
+
+../src/config/default/net_pres/pres/net_pres_encryptionproviderapi.h:
+
+../src/config/default/net_pres/pres/net_pres.h:
+
+../src/config/default/net_pres/pres/net_pres_transportapi.h:
+
+../src/config/default/net_pres/pres/net_pres_socketapi.h:
+
+../src/config/default/net_pres/pres/net_pres_socketapiconversion.h:
+
+../src/config/default/net_pres/pres/net_pres_socketapi.h:
+
+../src/config/default/peripheral/tcc/plib_tcc0.h:
+
+../src/config/default/peripheral/tcc/plib_tcc_common.h:
+
+../src/config/default/system/console/sys_console.h:
+
+../src/config/default/system/console/src/sys_console_uart_definitions.h:
+
+../src/udp_server.h:
+
+../src/udp_client.h:
+
 ../src/third_party/wolfssl/wolfssl/wolfcrypt/wolfmath.h:
 
 ../src/third_party/wolfssl/wolfssl/wolfcrypt/hash.h:
@@ -370,9 +711,15 @@ build/default/debug/_ext/172253694/crypt_wolfcryptcb.o: \
 
 ../src/third_party/wolfssl/wolfssl/wolfcrypt/sha.h:
 
+../src/third_party/wolfssl/wolfssl/wolfcrypt/port/pic32/crypt_sha1_hw.h:
+
 ../src/third_party/wolfssl/wolfssl/wolfcrypt/ecc.h:
 
 ../src/third_party/wolfssl/wolfssl/wolfcrypt/aes.h:
+
+../src/third_party/wolfssl/wolfssl/wolfcrypt/port/pic32/crypt_aes_hw.h:
+
+../src/third_party/wolfssl/wolfssl/wolfcrypt/port/pic32/crypt_aes_u2238.h:
 
 ../src/third_party/wolfssl/wolfssl/wolfcrypt/hmac.h:
 

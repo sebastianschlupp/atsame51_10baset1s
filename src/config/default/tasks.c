@@ -55,6 +55,68 @@
 #include "sys_tasks.h"
 
 
+// *****************************************************************************
+// *****************************************************************************
+// Section: RTOS "Tasks" Routine
+// *****************************************************************************
+// *****************************************************************************
+
+void _TCPIP_STACK_Task(  void *pvParameters  )
+{
+    while(1)
+    {
+        TCPIP_STACK_Task(sysObj.tcpip);
+        //SYS_DEBUG_PRINT(SYS_ERROR_DEBUG, ".\n\r");
+        //vTaskDelay(1U / portTICK_PERIOD_MS);
+    }
+}
+
+/* Handle for the UDP_SERVER_Tasks. */
+TaskHandle_t xUDP_SERVER_Tasks;
+
+static void lUDP_SERVER_Tasks(  void *pvParameters  )
+{   
+    while(true)
+    {
+        UDP_SERVER_Tasks();
+        vTaskDelay(1U / portTICK_PERIOD_MS);
+    }
+}
+/* Handle for the UDP_CLIENT_Tasks. */
+TaskHandle_t xUDP_CLIENT_Tasks;
+
+static void lUDP_CLIENT_Tasks(  void *pvParameters  )
+{   
+    while(true)
+    {
+        UDP_CLIENT_Tasks();
+        vTaskDelay(1U / portTICK_PERIOD_MS);
+    }
+}
+
+TaskHandle_t xSYS_CMD_Tasks;
+void lSYS_CMD_Tasks(  void *pvParameters  )
+{
+    while(1)
+    {
+        SYS_CMD_Tasks();
+        vTaskDelay(10 / portTICK_PERIOD_MS);
+    }
+}
+
+
+
+void _NET_PRES_Tasks(  void *pvParameters  )
+{
+    while(1)
+    {
+        NET_PRES_Tasks(sysObj.netPres);
+        vTaskDelay(1 / portTICK_PERIOD_MS);
+    }
+}
+
+
+
 
 // *****************************************************************************
 // *****************************************************************************
@@ -74,7 +136,14 @@ void SYS_Tasks ( void )
     /* Maintain system services */
     
 
-SYS_CMD_Tasks();
+    (void) xTaskCreate( lSYS_CMD_Tasks,
+        "SYS_CMD_TASKS",
+        SYS_CMD_RTOS_STACK_SIZE,
+        (void*)NULL,
+        SYS_CMD_RTOS_TASK_PRIORITY,
+        //3,
+        &xSYS_CMD_Tasks
+    );
 
 
 
@@ -84,18 +153,55 @@ SYS_CMD_Tasks();
 
     /* Maintain Middleware & Other Libraries */
     
-   TCPIP_STACK_Task(sysObj.tcpip);
+    xTaskCreate( _TCPIP_STACK_Task,
+        "TCPIP_STACK_Tasks",
+        TCPIP_RTOS_STACK_SIZE,
+        (void*)NULL,
+        TCPIP_RTOS_PRIORITY,
+        //2,
+        (TaskHandle_t*)NULL
+    );
+
+
+
+    xTaskCreate( _NET_PRES_Tasks,
+        "NET_PRES_Tasks",
+        NET_PRES_RTOS_STACK_SIZE,
+        (void*)NULL,
+        NET_PRES_RTOS_TASK_PRIORITY,
+        //2,
+        (TaskHandle_t*)NULL
+    );
 
 
 
 
     /* Maintain the application's state machine. */
-        /* Call Application task APP. */
-    APP_Tasks();
-    USER_Tasks();
+        /* Create OS Thread for UDP_SERVER_Tasks. */
+    /*(void) xTaskCreate((TaskFunction_t) lUDP_SERVER_Tasks,
+                "UDP_SERVER_Tasks",
+                256,
+                NULL,
+                1,
+                &xUDP_SERVER_Tasks);*/
+
+    /* Create OS Thread for UDP_CLIENT_Tasks. */
+    (void) xTaskCreate((TaskFunction_t) lUDP_CLIENT_Tasks,
+                "UDP_CLIENT_Tasks",
+                256,
+                NULL,
+                1,
+                &xUDP_CLIENT_Tasks);
 
 
 
+
+    /* Start RTOS Scheduler. */
+    
+     /**********************************************************************
+     * Create all Threads for APP Tasks before starting FreeRTOS Scheduler *
+     ***********************************************************************/
+    vTaskStartScheduler(); /* This function never returns. */
 
 }
 

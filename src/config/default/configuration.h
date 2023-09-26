@@ -71,7 +71,7 @@ extern "C" {
 // Section: System Configuration
 // *****************************************************************************
 // *****************************************************************************
-
+    
 
 
 // *****************************************************************************
@@ -96,9 +96,12 @@ extern "C" {
 
 #define SYS_CMD_ENABLE
 #define SYS_CMD_DEVICE_MAX_INSTANCES       SYS_CONSOLE_DEVICE_MAX_INSTANCES
-#define SYS_CMD_PRINT_BUFFER_SIZE          1024U
+#define SYS_CMD_PRINT_BUFFER_SIZE          1000U
 #define SYS_CMD_BUFFER_DMA_READY
 
+/* Command System Service RTOS Configurations*/
+#define SYS_CMD_RTOS_STACK_SIZE                768
+#define SYS_CMD_RTOS_TASK_PRIORITY             2
 
 
 #define SYS_DEBUG_ENABLE
@@ -203,6 +206,27 @@ extern "C" {
 #define TCPIP_STACK_COMMANDS_ICMP_ECHO_REQUEST_BUFF_SIZE    2000
 #define TCPIP_STACK_COMMANDS_ICMP_ECHO_REQUEST_DATA_SIZE    100
 
+/******************************************************************************/
+/*wolfSSL TLS Layer Configuration*/
+/******************************************************************************/
+
+#define WOLFSSL_ALT_NAMES
+#define WOLFSSL_DER_LOAD
+#define KEEP_OUR_CERT
+#define KEEP_PEER_CERT
+#define HAVE_CRL_IO
+#define HAVE_IO_TIMEOUT
+#define TFM_NO_ASM
+#define WOLFSSL_NO_ASM
+#define SIZEOF_LONG_LONG 8
+#define WOLFSSL_USER_IO
+#define NO_WRITEV
+#define MICROCHIP_TCPIP
+#define WOLFSSL_DTLS
+#define NO_PWDBASED
+#define NO_ERROR_STRINGS
+#define NO_OLD_TLS
+
 
 /*** TCP Configuration ***/
 #define TCPIP_TCP_MAX_SEG_SIZE_TX		        	1460
@@ -246,15 +270,15 @@ extern "C" {
 
 
 
-	/*** tcpip_cmd Configuration ***/
-	#define TCPIP_STACK_COMMAND_ENABLE
+/*** tcpip_cmd Configuration ***/
+#define TCPIP_STACK_COMMAND_ENABLE
 
 
 
 /* Network Configuration Index 0 */
 #define TCPIP_NETWORK_DEFAULT_INTERFACE_NAME_IDX0 "LAN865x"
 
-#define TCPIP_NETWORK_DEFAULT_HOST_NAME_IDX0              "MCHP_LAN865x_Node0"
+#define TCPIP_NETWORK_DEFAULT_HOST_NAME_IDX0              "MCHP_LAN865x"
 #define TCPIP_NETWORK_DEFAULT_MAC_ADDR_IDX0               "00:04:25:1C:A0:00"
 
 #define TCPIP_NETWORK_DEFAULT_IP_ADDRESS_IDX0         "192.168.100.10"
@@ -270,6 +294,12 @@ extern "C" {
                                                     
 #define TCPIP_NETWORK_DEFAULT_MAC_DRIVER_IDX0         DRV_LAN865X_MACObject
 
+
+
+/*** Berkeley API Configuration ***/
+#define TCPIP_STACK_USE_BERKELEY_API
+#define MAX_BSD_SOCKETS 					4
+#define TCPIP_STACK_USE_BERKELEY_API
 
 
 /*** iperf Configuration ***/
@@ -328,7 +358,7 @@ extern "C" {
 #define TCPIP_STACK_USE_TCP
 #define TCPIP_STACK_USE_UDP
 
-#define TCPIP_STACK_TICK_RATE		        		5
+#define TCPIP_STACK_TICK_RATE		        		1
 #define TCPIP_STACK_SECURE_PORT_ENTRIES             10
 #define TCPIP_STACK_LINK_RATE		        		333
 
@@ -351,6 +381,27 @@ extern "C" {
 
 
 
+/* TCP/IP RTOS Configurations*/
+#define TCPIP_RTOS_STACK_SIZE                1024
+#define TCPIP_RTOS_PRIORITY             1
+
+
+
+/*** SNTP Configuration ***/
+#define TCPIP_STACK_USE_SNTP_CLIENT
+#define TCPIP_NTP_DEFAULT_IF		        	"LAN865x"
+#define TCPIP_NTP_VERSION             			4
+#define TCPIP_NTP_DEFAULT_CONNECTION_TYPE   	IP_ADDRESS_TYPE_IPV4
+#define TCPIP_NTP_EPOCH		                	2208988800ul
+#define TCPIP_NTP_REPLY_TIMEOUT		        	6
+#define TCPIP_NTP_MAX_STRATUM		        	15
+#define TCPIP_NTP_TIME_STAMP_TMO				660
+#define TCPIP_NTP_SERVER		        		"pool.ntp.org"
+#define TCPIP_NTP_SERVER_MAX_LENGTH				30
+#define TCPIP_NTP_QUERY_INTERVAL				600
+#define TCPIP_NTP_FAST_QUERY_INTERVAL	    	14
+#define TCPIP_NTP_TASK_TICK_RATE				1100
+#define TCPIP_NTP_RX_QUEUE_LIMIT				2
 
 
 
@@ -380,28 +431,47 @@ extern "C" {
 #define NO_PWDBASED
 #define HAVE_MCAPI
 #define WOLF_CRYPTO_CB  // provide call-back support
-#define WOLFCRYPT_ONLY
+#define WOLFSSL_HAVE_MCHP_HW_CRYPTO
+// ---------- CRYPTO HARDWARE MANIFEST START ----------
+#define WOLFSSL_HAVE_MCHP_HW_CRYPTO_ECC_HW_PUKCC
+#define WOLFSSL_HAVE_MCHP_HW_CRYPTO_AES_HW_U2238
+#define WOLFSSL_HAVE_MCHP_HW_CRYPTO_SHA_HW_11105
+#define WOLFSSL_HAVE_MCHP_HW_CRYPTO_SHA_HW_U2010
+#define WOLFSSL_HAVE_MCHP_HW_CRYPTO_TRNG_HW_U2242
+#define WOLFSSL_HAVE_MCHP_HW_CRYPTO_RSA_HW_PUKCC
+// ---------- CRYPTO HARDWARE MANIFEST END ----------
+#undef WOLFSSL_HAVE_MIN
+#undef WOLFSSL_HAVE_MAX
 // ---------- FUNCTIONAL CONFIGURATION START ----------
 #define WOLFSSL_AES_SMALL_TABLES
 #define NO_MD4
+#define WOLFSSL_HAVE_MCHP_HW_SHA1
 #define WOLFSSL_SHA224
+#define WOLFSSL_HAVE_MCHP_HW_SHA264
 #define WOLFSSL_AES_128
 #define WOLFSSL_AES_192
 #define WOLFSSL_AES_256
 #define WOLFSSL_AES_DIRECT
 #define HAVE_AES_DECRYPT
+#define WOLFSSL_HAVE_MCHP_HW_AES_DIRECT
 #define HAVE_AES_ECB
+#define WOLFSSL_HAVE_MCHP_HW_AES_ECB
 #define HAVE_AES_CBC
+#define WOLFSSL_HAVE_MCHP_HW_AES_CBC
 #define WOLFSSL_AES_COUNTER
+#define WOLFSSL_HAVE_MCHP_HW_AES_CTR
 #define WOLFSSL_AES_OFB
 #define HAVE_AESGCM
+#define WOLFSSL_HAVE_MCHP_HW_AES_GCM
 #define HAVE_AESCCM
 #define NO_RC4
 #define NO_HC128
 #define NO_RABBIT
 #define HAVE_ECC
+#define WOLFSSL_HAVE_MCHP_HW_ECC
 #define NO_DH
 #define NO_DSA
+#define WOLFSSL_HAVE_MCHP_HW_RSA
 #define FP_MAX_BITS 4096
 #define USE_CERT_BUFFERS_2048
 #define NO_DEV_RANDOM
@@ -412,6 +482,16 @@ extern "C" {
 #define NO_ERROR_STRINGS
 #define NO_WOLFSSL_MEMORY
 // ---------- FUNCTIONAL CONFIGURATION END ----------
+
+/* MPLAB Harmony Net Presentation Layer Definitions*/
+#define NET_PRES_NUM_INSTANCE 1
+#define NET_PRES_NUM_SOCKETS 10
+
+/* Net Pres RTOS Configurations*/
+#define NET_PRES_RTOS_STACK_SIZE                1024
+#define NET_PRES_RTOS_TASK_PRIORITY             1
+	
+
 
 #define TCPIP_STACK_NETWORK_INTERAFCE_COUNT  	1
 

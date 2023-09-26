@@ -48,3 +48,6 @@ Thumbs.db
 *.mov
 *.wmv
 
+# Build outputs
+SAME51_10BASET1S.X/**
+SAME51_10BASET1S.mc3.*

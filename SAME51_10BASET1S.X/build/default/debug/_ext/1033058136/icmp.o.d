@@ -126,7 +126,20 @@ build/default/debug/_ext/1033058136/icmp.o: \
  ../src/config/default/system/time/sys_time_definitions.h \
  ../src/config/default/osal/osal.h \
  ../src/config/default/osal/osal_definitions.h \
- ../src/config/default/osal/osal_impl_basic.h \
+ ../src/config/default/osal/osal_freertos.h \
+ ../src/third_party/rtos/FreeRTOS/Source/include/FreeRTOS.h \
+ ../src/config/default/FreeRTOSConfig.h \
+ ../src/third_party/rtos/FreeRTOS/Source/include/projdefs.h \
+ ../src/third_party/rtos/FreeRTOS/Source/include/portable.h \
+ ../src/third_party/rtos/FreeRTOS/Source/include/deprecated_definitions.h \
+ ../src/third_party/rtos/FreeRTOS/Source/portable/GCC/SAM/ARM_CM4F/portmacro.h \
+ ../src/third_party/rtos/FreeRTOS/Source/include/mpu_wrappers.h \
+ ../src/third_party/rtos/FreeRTOS/Source/include/queue.h \
+ ../src/third_party/rtos/FreeRTOS/Source/include/task.h \
+ ../src/third_party/rtos/FreeRTOS/Source/include/list.h \
+ ../src/third_party/rtos/FreeRTOS/Source/include/semphr.h \
+ ../src/third_party/rtos/FreeRTOS/Source/include/queue.h \
+ ../src/third_party/rtos/FreeRTOS/Source/include/task.h \
  ../src/config/default/library/tcpip/src/common/helpers.h \
  ../src/config/default/library/tcpip/tcpip.h \
  ../src/config/default/library/tcpip/tcpip_common_ports.h \
@@ -142,7 +155,9 @@ build/default/debug/_ext/1033058136/icmp.o: \
  ../src/config/default/library/tcpip/arp.h \
  ../src/config/default/library/tcpip/tcp.h \
  ../src/config/default/library/tcpip/udp.h \
+ ../src/config/default/library/tcpip/berkeley_api.h \
  ../src/config/default/library/tcpip/icmp.h \
+ ../src/config/default/library/tcpip/sntp.h \
  ../src/config/default/library/tcpip/lldp.h \
  ../src/config/default/library/tcpip/iperf.h \
  ../src/config/default/library/tcpip/tcpip_commands.h \
@@ -158,6 +173,9 @@ build/default/debug/_ext/1033058136/icmp.o: \
  ../src/config/default/library/tcpip/src/tcp_manager.h \
  ../src/config/default/library/tcpip/src/tcpip_commands_manager.h \
  ../src/config/default/library/tcpip/src/udp_manager.h \
+ ../src/config/default/library/tcpip/src/sntp_manager.h \
+ ../src/config/default/library/tcpip/src/berkeley_manager.h \
+ ../src/config/default/net_pres/pres/net_pres.h \
  ../src/config/default/library/tcpip/src/lldp_manager.h \
  ../src/config/default/library/tcpip/src/iperf_manager.h \
  ../src/config/default/library/tcpip/src/tcpip_packet.h \
@@ -421,7 +439,33 @@ build/default/debug/_ext/1033058136/icmp.o: \
 
 ../src/config/default/osal/osal_definitions.h:
 
-../src/config/default/osal/osal_impl_basic.h:
+../src/config/default/osal/osal_freertos.h:
+
+../src/third_party/rtos/FreeRTOS/Source/include/FreeRTOS.h:
+
+../src/config/default/FreeRTOSConfig.h:
+
+../src/third_party/rtos/FreeRTOS/Source/include/projdefs.h:
+
+../src/third_party/rtos/FreeRTOS/Source/include/portable.h:
+
+../src/third_party/rtos/FreeRTOS/Source/include/deprecated_definitions.h:
+
+../src/third_party/rtos/FreeRTOS/Source/portable/GCC/SAM/ARM_CM4F/portmacro.h:
+
+../src/third_party/rtos/FreeRTOS/Source/include/mpu_wrappers.h:
+
+../src/third_party/rtos/FreeRTOS/Source/include/queue.h:
+
+../src/third_party/rtos/FreeRTOS/Source/include/task.h:
+
+../src/third_party/rtos/FreeRTOS/Source/include/list.h:
+
+../src/third_party/rtos/FreeRTOS/Source/include/semphr.h:
+
+../src/third_party/rtos/FreeRTOS/Source/include/queue.h:
+
+../src/third_party/rtos/FreeRTOS/Source/include/task.h:
 
 ../src/config/default/library/tcpip/src/common/helpers.h:
 
@@ -453,7 +497,11 @@ build/default/debug/_ext/1033058136/icmp.o: \
 
 ../src/config/default/library/tcpip/udp.h:
 
+../src/config/default/library/tcpip/berkeley_api.h:
+
 ../src/config/default/library/tcpip/icmp.h:
+
+../src/config/default/library/tcpip/sntp.h:
 
 ../src/config/default/library/tcpip/lldp.h:
 
@@ -484,6 +532,12 @@ build/default/debug/_ext/1033058136/icmp.o: \
 ../src/config/default/library/tcpip/src/tcpip_commands_manager.h:
 
 ../src/config/default/library/tcpip/src/udp_manager.h:
+
+../src/config/default/library/tcpip/src/sntp_manager.h:
+
+../src/config/default/library/tcpip/src/berkeley_manager.h:
+
+../src/config/default/net_pres/pres/net_pres.h:
 
 ../src/config/default/library/tcpip/src/lldp_manager.h:
 

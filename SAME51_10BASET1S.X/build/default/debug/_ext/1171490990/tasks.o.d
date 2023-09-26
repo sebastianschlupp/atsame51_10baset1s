@@ -141,7 +141,20 @@ build/default/debug/_ext/1171490990/tasks.o: \
  ../src/config/default/driver/spi/drv_spi.h \
  ../src/config/default/osal/osal.h \
  ../src/config/default/osal/osal_definitions.h \
- ../src/config/default/osal/osal_impl_basic.h \
+ ../src/config/default/osal/osal_freertos.h \
+ ../src/third_party/rtos/FreeRTOS/Source/include/FreeRTOS.h \
+ ../src/config/default/FreeRTOSConfig.h \
+ ../src/third_party/rtos/FreeRTOS/Source/include/projdefs.h \
+ ../src/third_party/rtos/FreeRTOS/Source/include/portable.h \
+ ../src/third_party/rtos/FreeRTOS/Source/include/deprecated_definitions.h \
+ ../src/third_party/rtos/FreeRTOS/Source/portable/GCC/SAM/ARM_CM4F/portmacro.h \
+ ../src/third_party/rtos/FreeRTOS/Source/include/mpu_wrappers.h \
+ ../src/third_party/rtos/FreeRTOS/Source/include/queue.h \
+ ../src/third_party/rtos/FreeRTOS/Source/include/task.h \
+ ../src/third_party/rtos/FreeRTOS/Source/include/list.h \
+ ../src/third_party/rtos/FreeRTOS/Source/include/semphr.h \
+ ../src/third_party/rtos/FreeRTOS/Source/include/queue.h \
+ ../src/third_party/rtos/FreeRTOS/Source/include/task.h \
  ../src/config/default/library/tcpip/tcpip.h \
  ../src/config/default/library/tcpip/tcpip_common_ports.h \
  ../src/config/default/library/tcpip/tcpip_manager.h \
@@ -154,7 +167,9 @@ build/default/debug/_ext/1171490990/tasks.o: \
  ../src/config/default/library/tcpip/arp.h \
  ../src/config/default/library/tcpip/tcp.h \
  ../src/config/default/library/tcpip/udp.h \
+ ../src/config/default/library/tcpip/berkeley_api.h \
  ../src/config/default/library/tcpip/icmp.h \
+ ../src/config/default/library/tcpip/sntp.h \
  ../src/config/default/library/tcpip/lldp.h \
  ../src/config/default/library/tcpip/iperf.h \
  ../src/config/default/library/tcpip/tcpip_commands.h \
@@ -171,6 +186,8 @@ build/default/debug/_ext/1171490990/tasks.o: \
  ../src/config/default/system/debug/sys_debug.h \
  ../src/config/default/system/console/sys_console.h \
  ../src/config/default/system/console/src/sys_console_local.h \
+ ../src/config/default/peripheral/sercom/i2c_master/plib_sercom2_i2c_master.h \
+ ../src/config/default/peripheral/sercom/i2c_master/plib_sercom_i2c_master_common.h \
  ../src/config/default/peripheral/sercom/spi_master/plib_sercom1_spi_master.h \
  ../src/config/default/peripheral/sercom/spi_master/plib_sercom_spi_master_common.h \
  ../src/config/default/peripheral/evsys/plib_evsys.h \
@@ -184,12 +201,20 @@ build/default/debug/_ext/1171490990/tasks.o: \
  ../src/config/default/peripheral/sercom/usart/plib_sercom_usart_common.h \
  ../src/config/default/peripheral/eic/plib_eic.h \
  ../src/third_party/wolfssl/wolfssl/wolfcrypt/port/pic32/crypt_wolfcryptcb.h \
+ ../src/config/default/net_pres/pres/net_pres.h \
+ ../src/config/default/system_config.h \
+ ../src/config/default/net_pres/pres/net_pres_encryptionproviderapi.h \
+ ../src/config/default/net_pres/pres/net_pres.h \
+ ../src/config/default/net_pres/pres/net_pres_transportapi.h \
+ ../src/config/default/net_pres/pres/net_pres_socketapi.h \
+ ../src/config/default/net_pres/pres/net_pres_socketapiconversion.h \
+ ../src/config/default/net_pres/pres/net_pres_socketapi.h \
  ../src/config/default/peripheral/tcc/plib_tcc0.h \
  ../src/config/default/peripheral/tcc/plib_tcc_common.h \
  ../src/config/default/system/console/sys_console.h \
  ../src/config/default/system/console/src/sys_console_uart_definitions.h \
- ../src/app.h ../src/userapp.h ../src/config/default/definitions.h \
- ../src/config/default/sys_tasks.h
+ ../src/udp_server.h ../src/udp_client.h \
+ ../src/config/default/definitions.h ../src/config/default/sys_tasks.h
 
 ../src/config/default/configuration.h:
 
@@ -477,7 +502,33 @@ build/default/debug/_ext/1171490990/tasks.o: \
 
 ../src/config/default/osal/osal_definitions.h:
 
-../src/config/default/osal/osal_impl_basic.h:
+../src/config/default/osal/osal_freertos.h:
+
+../src/third_party/rtos/FreeRTOS/Source/include/FreeRTOS.h:
+
+../src/config/default/FreeRTOSConfig.h:
+
+../src/third_party/rtos/FreeRTOS/Source/include/projdefs.h:
+
+../src/third_party/rtos/FreeRTOS/Source/include/portable.h:
+
+../src/third_party/rtos/FreeRTOS/Source/include/deprecated_definitions.h:
+
+../src/third_party/rtos/FreeRTOS/Source/portable/GCC/SAM/ARM_CM4F/portmacro.h:
+
+../src/third_party/rtos/FreeRTOS/Source/include/mpu_wrappers.h:
+
+../src/third_party/rtos/FreeRTOS/Source/include/queue.h:
+
+../src/third_party/rtos/FreeRTOS/Source/include/task.h:
+
+../src/third_party/rtos/FreeRTOS/Source/include/list.h:
+
+../src/third_party/rtos/FreeRTOS/Source/include/semphr.h:
+
+../src/third_party/rtos/FreeRTOS/Source/include/queue.h:
+
+../src/third_party/rtos/FreeRTOS/Source/include/task.h:
 
 ../src/config/default/library/tcpip/tcpip.h:
 
@@ -503,7 +554,11 @@ build/default/debug/_ext/1171490990/tasks.o: \
 
 ../src/config/default/library/tcpip/udp.h:
 
+../src/config/default/library/tcpip/berkeley_api.h:
+
 ../src/config/default/library/tcpip/icmp.h:
+
+../src/config/default/library/tcpip/sntp.h:
 
 ../src/config/default/library/tcpip/lldp.h:
 
@@ -537,6 +592,10 @@ build/default/debug/_ext/1171490990/tasks.o: \
 
 ../src/config/default/system/console/src/sys_console_local.h:
 
+../src/config/default/peripheral/sercom/i2c_master/plib_sercom2_i2c_master.h:
+
+../src/config/default/peripheral/sercom/i2c_master/plib_sercom_i2c_master_common.h:
+
 ../src/config/default/peripheral/sercom/spi_master/plib_sercom1_spi_master.h:
 
 ../src/config/default/peripheral/sercom/spi_master/plib_sercom_spi_master_common.h:
@@ -563,6 +622,22 @@ build/default/debug/_ext/1171490990/tasks.o: \
 
 ../src/third_party/wolfssl/wolfssl/wolfcrypt/port/pic32/crypt_wolfcryptcb.h:
 
+../src/config/default/net_pres/pres/net_pres.h:
+
+../src/config/default/system_config.h:
+
+../src/config/default/net_pres/pres/net_pres_encryptionproviderapi.h:
+
+../src/config/default/net_pres/pres/net_pres.h:
+
+../src/config/default/net_pres/pres/net_pres_transportapi.h:
+
+../src/config/default/net_pres/pres/net_pres_socketapi.h:
+
+../src/config/default/net_pres/pres/net_pres_socketapiconversion.h:
+
+../src/config/default/net_pres/pres/net_pres_socketapi.h:
+
 ../src/config/default/peripheral/tcc/plib_tcc0.h:
 
 ../src/config/default/peripheral/tcc/plib_tcc_common.h:
@@ -571,9 +646,9 @@ build/default/debug/_ext/1171490990/tasks.o: \
 
 ../src/config/default/system/console/src/sys_console_uart_definitions.h:
 
-../src/app.h:
+../src/udp_server.h:
 
-../src/userapp.h:
+../src/udp_client.h:
 
 ../src/config/default/definitions.h:
 
