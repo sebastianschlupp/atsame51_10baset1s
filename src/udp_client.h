@@ -5,7 +5,7 @@
     Microchip Technology Inc.
 
   File Name:
-    app1.h
+    udp_client.h
 
   Summary:
     This header file provides prototypes and definitions for the application.
@@ -13,13 +13,13 @@
   Description:
     This header file provides function prototypes and data type definitions for
     the application.  Some of these are required by the system (such as the
-    "APP1_Initialize" and "APP1_Tasks" prototypes) and some of them are only used
-    internally by the application (such as the "APP1_STATES" definition).  Both
+    "UDP_CLIENT_Initialize" and "UDP_CLIENT_Tasks" prototypes) and some of them are only used
+    internally by the application (such as the "UDP_CLIENT_STATES" definition).  Both
     are defined here for convenience.
 *******************************************************************************/
 
-#ifndef _APP1_H
-#define _APP1_H
+#ifndef _UDP_CLIENT_H
+#define _UDP_CLIENT_H
 
 // *****************************************************************************
 // *****************************************************************************
@@ -42,8 +42,6 @@ extern "C" {
 #endif
 // DOM-IGNORE-END
 
-#define SERVER_PORT 9760
-    
 // *****************************************************************************
 // *****************************************************************************
 // Section: Type Definitions
@@ -63,17 +61,26 @@ extern "C" {
 
 typedef enum
 {
-    /* Application's state machine's initial state. */
-    APP1_TCPIP_WAIT_INIT=0,
-    APP1_TCPIP_ERROR=1,
-    APP1_TCPIP_WAIT_FOR_IP=2,
-    APP1_BSD_CREATE_SOCKET=3,
-    APP1_BSD_BIND=4,
-    APP1_TCPIP_SERVING_CONNECTION=5,
-    APP1_TCPIP_CLOSING_CONNECTION=6            
-    /* TODO: Define states used by the application state machine. */
+    UDP_CLIENT_TCPIP_WAIT_INIT,
+    /* In this state, the application waits for a IP Address */
+    UDP_CLIENT_TCPIP_WAIT_FOR_IP,
 
-} APP1_STATES;
+    UDP_CLIENT_TCPIP_WAITING_FOR_COMMAND,
+
+    UDP_CLIENT_TCPIP_WAIT_ON_DNS,
+
+    UDP_CLIENT_BSD_CREATE_SOCKET,
+
+    UDP_CLIENT_BSD_BIND,
+
+    UDP_CLIENT_TCPIP_SEND,
+
+    UDP_CLIENT_TCPIP_RECV,
+
+    UDP_CLIENT_TCPIP_CLOSING_CONNECTION,
+
+    UDP_CLIENT_TCPIP_ERROR,
+} UDP_CLIENT_STATES;
 
 
 // *****************************************************************************
@@ -92,11 +99,20 @@ typedef enum
 typedef struct
 {
     /* The application's current state */
-    APP1_STATES state;
-    SOCKET socket;
-    /* TODO: Define any additional data used by the application. */
+    UDP_CLIENT_STATES state;
 
-} APP1_DATA;
+    /* TODO: Define any additional data used by the application. */
+    SOCKET              socket;
+    struct addrinfo     hints;
+    struct addrinfo *   addressInfo;
+#ifndef TCPIP_STACK_USE_IPV6
+    struct sockaddr_in6  rxaddr;
+#else
+    struct sockaddr_in  rxaddr;
+#endif
+    uint64_t systemCount;
+
+} UDP_CLIENT_DATA;
 
 // *****************************************************************************
 // *****************************************************************************
@@ -114,7 +130,7 @@ typedef struct
 
 /*******************************************************************************
   Function:
-    void APP1_Initialize ( void )
+    void UDP_CLIENT_Initialize ( void )
 
   Summary:
      MPLAB Harmony application initialization routine.
@@ -122,7 +138,7 @@ typedef struct
   Description:
     This function initializes the Harmony application.  It places the
     application in its initial state and prepares it to run so that its
-    APP1_Tasks function can be called.
+    UDP_CLIENT_Tasks function can be called.
 
   Precondition:
     All other system initialization routines should be called before calling
@@ -136,19 +152,19 @@ typedef struct
 
   Example:
     <code>
-    APP1_Initialize();
+    UDP_CLIENT_Initialize();
     </code>
 
   Remarks:
     This routine must be called from the SYS_Initialize function.
 */
 
-void APP1_Initialize ( void );
+void UDP_CLIENT_Initialize ( void );
 
 
 /*******************************************************************************
   Function:
-    void APP1_Tasks ( void )
+    void UDP_CLIENT_Tasks ( void )
 
   Summary:
     MPLAB Harmony Demo application tasks function
@@ -169,14 +185,14 @@ void APP1_Initialize ( void );
 
   Example:
     <code>
-    APP1_Tasks();
+    UDP_CLIENT_Tasks();
     </code>
 
   Remarks:
     This routine must be called from SYS_Tasks() routine.
  */
 
-void APP1_Tasks( void );
+void UDP_CLIENT_Tasks( void );
 
 //DOM-IGNORE-BEGIN
 #ifdef __cplusplus
@@ -184,7 +200,7 @@ void APP1_Tasks( void );
 #endif
 //DOM-IGNORE-END
 
-#endif /* _APP1_H */
+#endif /* _UDP_CLIENT_H */
 
 /*******************************************************************************
  End of File

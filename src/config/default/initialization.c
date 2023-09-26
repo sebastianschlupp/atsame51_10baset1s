@@ -692,8 +692,8 @@ void SYS_Initialize ( void* data )
     CRYPT_WCCB_Initialize();
 
     /* MISRAC 2012 deviation block end */
-    APP_Initialize();
-    APP1_Initialize();
+    UDP_SERVER_Initialize();
+    UDP_CLIENT_Initialize();
 
 
     NVIC_Initialize();

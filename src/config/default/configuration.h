@@ -71,7 +71,7 @@ extern "C" {
 // Section: System Configuration
 // *****************************************************************************
 // *****************************************************************************
-
+    
 
 
 // *****************************************************************************
@@ -270,8 +270,8 @@ extern "C" {
 
 
 
-	/*** tcpip_cmd Configuration ***/
-	#define TCPIP_STACK_COMMAND_ENABLE
+/*** tcpip_cmd Configuration ***/
+#define TCPIP_STACK_COMMAND_ENABLE
 
 
 
@@ -296,6 +296,12 @@ extern "C" {
 
 
 
+/*** Berkeley API Configuration ***/
+#define TCPIP_STACK_USE_BERKELEY_API
+#define MAX_BSD_SOCKETS 					4
+#define TCPIP_STACK_USE_BERKELEY_API
+
+
 /*** iperf Configuration ***/
 #define TCPIP_STACK_USE_IPERF
 #define TCPIP_IPERF_TX_BUFFER_SIZE		4096
@@ -306,12 +312,6 @@ extern "C" {
 #define TCPIP_IPERF_MAX_INSTANCES       1
 #define TCPIP_IPERF_TX_BW_LIMIT  		10
 
-
-
-/*** Berkeley API Configuration ***/
-#define TCPIP_STACK_USE_BERKELEY_API
-#define MAX_BSD_SOCKETS 					4
-#define TCPIP_STACK_USE_BERKELEY_API
 
 
 /*** IPv4 Configuration ***/

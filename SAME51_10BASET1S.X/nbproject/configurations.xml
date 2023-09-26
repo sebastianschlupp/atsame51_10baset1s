@@ -609,8 +609,9 @@
         <itemPath>../src/third_party/wolfssl/wolfssl/error-ssl.h</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/callbacks.h</itemPath>
       </logicalFolder>
-      <itemPath>../src/app.h</itemPath>
-      <itemPath>../src/app1.h</itemPath>
+      <itemPath>../src/udp_client.h</itemPath>
+      <itemPath>../src/udp_server.h</itemPath>
+      <itemPath>../src/udp_client_commands.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -912,8 +913,9 @@
       </logicalFolder>
       <itemPath>../src/config/default/pin_configurations.csv</itemPath>
       <itemPath>../src/main.c</itemPath>
-      <itemPath>../src/app.c</itemPath>
-      <itemPath>../src/app1.c</itemPath>
+      <itemPath>../src/udp_client.c</itemPath>
+      <itemPath>../src/udp_server.c</itemPath>
+      <itemPath>../src/udp_client_commands.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
