@@ -214,7 +214,7 @@ build/default/debug/_ext/181894553/drv_lan865x_api.o: \
  ../src/config/default/peripheral/tcc/plib_tcc_common.h \
  ../src/config/default/system/console/sys_console.h \
  ../src/config/default/system/console/src/sys_console_uart_definitions.h \
- ../src/app.h ../src/app1.h \
+ ../src/udp_server.h ../src/udp_client.h \
  ../src/config/default/driver/lan865x/src/dynamic/drv_lan865x_local.h \
  ../src/config/default/driver/lan865x/src/dynamic/tc6/tc6.h \
  ../src/config/default/library/tcpip/src/tcpip_private.h \
@@ -676,9 +676,9 @@ build/default/debug/_ext/181894553/drv_lan865x_api.o: \
 
 ../src/config/default/system/console/src/sys_console_uart_definitions.h:
 
-../src/app.h:
+../src/udp_server.h:
 
-../src/app1.h:
+../src/udp_client.h:
 
 ../src/config/default/driver/lan865x/src/dynamic/drv_lan865x_local.h:
 

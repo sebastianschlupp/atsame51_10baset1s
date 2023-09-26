@@ -226,7 +226,7 @@ build/default/debug/_ext/1664057780/asn.o: \
  ../src/config/default/peripheral/tcc/plib_tcc_common.h \
  ../src/config/default/system/console/sys_console.h \
  ../src/config/default/system/console/src/sys_console_uart_definitions.h \
- ../src/app.h ../src/app1.h \
+ ../src/udp_server.h ../src/udp_client.h \
  ../src/third_party/wolfssl/wolfssl/wolfcrypt/wolfmath.h \
  ../src/third_party/wolfssl/wolfssl/wolfcrypt/sha.h \
  ../src/third_party/wolfssl/wolfssl/wolfcrypt/port/pic32/crypt_sha1_hw.h \
@@ -708,9 +708,9 @@ build/default/debug/_ext/1664057780/asn.o: \
 
 ../src/config/default/system/console/src/sys_console_uart_definitions.h:
 
-../src/app.h:
+../src/udp_server.h:
 
-../src/app1.h:
+../src/udp_client.h:
 
 ../src/third_party/wolfssl/wolfssl/wolfcrypt/wolfmath.h:
 

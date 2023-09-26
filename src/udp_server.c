@@ -5,7 +5,7 @@
     Microchip Technology Inc.
 
   File Name:
-    app.c
+    udp_server.c
 
   Summary:
     This file contains the source code for the MPLAB Harmony application.
@@ -27,7 +27,7 @@
 // *****************************************************************************
 // *****************************************************************************
 
-#include "app.h"
+#include "udp_server.h"
 
 // *****************************************************************************
 // *****************************************************************************
@@ -45,12 +45,12 @@
     This structure holds the application's data.
 
   Remarks:
-    This structure should be initialized by the APP_Initialize function.
+    This structure should be initialized by the UDP_SERVER_Initialize function.
 
     Application strings and buffers are be defined outside this structure.
 */
 
-APP_DATA appData;
+UDP_SERVER_DATA udp_serverData;
 
 // *****************************************************************************
 // *****************************************************************************
@@ -80,16 +80,16 @@ APP_DATA appData;
 
 /*******************************************************************************
   Function:
-    void APP_Initialize ( void )
+    void UDP_SERVER_Initialize ( void )
 
   Remarks:
-    See prototype in app.h.
+    See prototype in udp_server.h.
  */
 
-void APP_Initialize ( void )
+void UDP_SERVER_Initialize ( void )
 {
     /* Place the App state machine in its initial state. */
-    appData.state = APP_STATE_INIT;
+    udp_serverData.state = UDP_SERVER_STATE_INIT;
 
 
 
@@ -101,20 +101,20 @@ void APP_Initialize ( void )
 
 /******************************************************************************
   Function:
-    void APP_Tasks ( void )
+    void UDP_SERVER_Tasks ( void )
 
   Remarks:
-    See prototype in app.h.
+    See prototype in udp_server.h.
  */
 
-void APP_Tasks ( void )
+void UDP_SERVER_Tasks ( void )
 {
 
     /* Check the application's current state. */
-    switch ( appData.state )
+    switch ( udp_serverData.state )
     {
         /* Application's initial state. */
-        case APP_STATE_INIT:
+        case UDP_SERVER_STATE_INIT:
         {
             bool appInitialized = true;
 
@@ -122,14 +122,14 @@ void APP_Tasks ( void )
             if (appInitialized)
             {
 
-                appData.state = APP_STATE_SERVICE_TASKS;
+                udp_serverData.state = UDP_SERVER_STATE_SERVICE_TASKS;
             }
             break;
         }
 
-        case APP_STATE_SERVICE_TASKS:
+        case UDP_SERVER_STATE_SERVICE_TASKS:
         {
-            
+
             break;
         }
 
@@ -140,7 +140,6 @@ void APP_Tasks ( void )
         default:
         {
             /* TODO: Handle error in application's state machine. */
-            SYS_DEBUG_PRINT(SYS_ERROR_ERROR, "Error code: %u",SYS_USER_ERROR_UNDEFINEDSTATE);
             break;
         }
     }

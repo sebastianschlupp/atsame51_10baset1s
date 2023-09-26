@@ -57,11 +57,11 @@
 // Section: RTOS "Tasks" Handles
 // *****************************************************************************
 // *****************************************************************************
-/* Declaration of  APP_Tasks task handle */
-extern TaskHandle_t xAPP_Tasks;
+/* Declaration of  UDP_SERVER_Tasks task handle */
+extern TaskHandle_t xUDP_SERVER_Tasks;
 
-/* Declaration of  APP1_Tasks task handle */
-extern TaskHandle_t xAPP1_Tasks;
+/* Declaration of  UDP_CLIENT_Tasks task handle */
+extern TaskHandle_t xUDP_CLIENT_Tasks;
 
 
 /* Declaration of SYS_COMMAND task handle */
