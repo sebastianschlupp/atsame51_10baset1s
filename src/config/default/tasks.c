@@ -53,6 +53,7 @@
 #include "configuration.h"
 #include "definitions.h"
 #include "sys_tasks.h"
+#include "udp_client_commands.h"
 
 
 // *****************************************************************************
@@ -61,13 +62,18 @@
 // *****************************************************************************
 // *****************************************************************************
 
+void EIC_User_Handler15()
+{
+    SYS_DEBUG_PRINT(SYS_ERROR_DEBUG, "Normal Boop!\n\r");
+    LED0_Toggle();
+    UDP_CLIENT_Send_Packet=true;
+}
+
 void _TCPIP_STACK_Task(  void *pvParameters  )
 {
     while(1)
     {
         TCPIP_STACK_Task(sysObj.tcpip);
-        //SYS_DEBUG_PRINT(SYS_ERROR_DEBUG, ".\n\r");
-        //vTaskDelay(1U / portTICK_PERIOD_MS);
     }
 }
 
@@ -133,6 +139,7 @@ void _NET_PRES_Tasks(  void *pvParameters  )
 */
 void SYS_Tasks ( void )
 {
+    EIC_CallbackRegister(EIC_PIN_15,EIC_User_Handler15, 0);
     /* Maintain system services */
     
 

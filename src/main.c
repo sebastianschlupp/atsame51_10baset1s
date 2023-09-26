@@ -38,11 +38,11 @@ int main ( void )
 {
     /* Initialize all modules */
     SYS_Initialize ( NULL );
-
+    
+    SYS_Tasks ( );
     while ( true )
     {
         /* Maintain state machines of all polled MPLAB Harmony modules. */
-        SYS_Tasks ( );
     }
 
     /* Execution should not come here during normal operation */
