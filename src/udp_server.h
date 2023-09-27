@@ -31,6 +31,7 @@
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdlib.h>
+#include "definitions.h"
 #include "configuration.h"
 
 // DOM-IGNORE-BEGIN
@@ -61,8 +62,21 @@ extern "C" {
 typedef enum
 {
     /* Application's state machine's initial state. */
-    UDP_SERVER_STATE_INIT=0,
-    UDP_SERVER_STATE_SERVICE_TASKS,
+    UDP_SERVER_TCPIP_WAIT_INIT,
+    /* In this state, the application waits for a IP Address */
+    UDP_SERVER_TCPIP_WAIT_FOR_IP,
+
+    UDP_SERVER_BSD_CREATE_SOCKET,
+
+    UDP_SERVER_BSD_BIND,
+
+    UDP_SERVER_TCPIP_WAIT_FOR_CONNECTION,
+
+    UDP_SERVER_TCPIP_SERVING_CONNECTION,
+
+    UDP_SERVER_TCPIP_CLOSING_CONNECTION,
+
+    UDP_SERVER_TCPIP_ERROR,
     /* TODO: Define states used by the application state machine. */
 
 } UDP_SERVER_STATES;
@@ -87,7 +101,7 @@ typedef struct
     UDP_SERVER_STATES state;
 
     /* TODO: Define any additional data used by the application. */
-
+    SOCKET socket;
 } UDP_SERVER_DATA;
 
 // *****************************************************************************

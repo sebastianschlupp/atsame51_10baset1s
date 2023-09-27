@@ -28,6 +28,8 @@
 // *****************************************************************************
 
 #include "udp_server.h"
+#include "definitions.h"                // SYS function prototypes
+#include "configuration.h"                // SYS function prototypes
 
 // *****************************************************************************
 // *****************************************************************************
@@ -50,6 +52,8 @@
     Application strings and buffers are be defined outside this structure.
 */
 
+#define SERVER_PORT 9760
+
 UDP_SERVER_DATA udp_serverData;
 
 // *****************************************************************************
@@ -70,7 +74,35 @@ UDP_SERVER_DATA udp_serverData;
 
 /* TODO:  Add any necessary local functions.
 */
-
+void SetLED(uint8_t token)
+{
+    SYS_DEBUG_PRINT(SYS_ERROR_DEBUG, "Token to be checked is: %u\n\r",token);
+    //We will only go throught the function if the first four bits of the token
+    //are 0x2 (0010)
+    if((token&0xF0) == 0x30)
+        SYS_DEBUG_PRINT(SYS_ERROR_DEBUG, "It does start with 0x3\n\r");
+    {
+        //we check the last for bits and implement
+        // 0x0 LED goes off
+        // 0x1 LED goes on
+        // 0x2 LED toggles
+        if((token&0x0F) == 0x00)
+        {
+            SYS_DEBUG_PRINT(SYS_ERROR_DEBUG, "Case 0\n\r");
+            LED0_Set();
+        } 
+        if((token&0x0F) == 0x01)
+        {
+            SYS_DEBUG_PRINT(SYS_ERROR_DEBUG, "Case 1\n\r");
+            LED0_Clear();
+        }
+        if((token&0x0F) == 0x02)
+        {
+            SYS_DEBUG_PRINT(SYS_ERROR_DEBUG, "Case 2\n\r");
+            LED0_Toggle();
+        }
+    }
+}
 
 // *****************************************************************************
 // *****************************************************************************
@@ -89,7 +121,7 @@ UDP_SERVER_DATA udp_serverData;
 void UDP_SERVER_Initialize ( void )
 {
     /* Place the App state machine in its initial state. */
-    udp_serverData.state = UDP_SERVER_STATE_INIT;
+    udp_serverData.state = UDP_SERVER_TCPIP_WAIT_INIT;
 
 
 
@@ -109,39 +141,119 @@ void UDP_SERVER_Initialize ( void )
 
 void UDP_SERVER_Tasks ( void )
 {
-
+    SYS_STATUS tcpipStat;
+    const char *netName, *netBiosName;
+    int i, nNets;
+    TCPIP_NET_HANDLE netH;
     /* Check the application's current state. */
     switch ( udp_serverData.state )
     {
-        /* Application's initial state. */
-        case UDP_SERVER_STATE_INIT:
-        {
-            bool appInitialized = true;
+    case UDP_SERVER_TCPIP_WAIT_INIT:
+            tcpipStat = TCPIP_STACK_Status(sysObj.tcpip);
+            if (tcpipStat < 0) { // some error occurred
+                SYS_CONSOLE_MESSAGE(" APP: TCP/IP stack initialization failed!\r\n");
+                udp_serverData.state = UDP_SERVER_TCPIP_ERROR;
+            } else if (tcpipStat == SYS_STATUS_READY) {
+                // now that the stack is ready we can check the 
+                // available interfaces 
+                nNets = TCPIP_STACK_NumberOfNetworksGet();
+                for (i = 0; i < nNets; i++) {
 
+                    netH = TCPIP_STACK_IndexToNet(i);
+                    netName = TCPIP_STACK_NetNameGet(netH);
+                    netBiosName = TCPIP_STACK_NetBIOSName(netH);
 
-            if (appInitialized)
-            {
+#if defined(TCPIP_STACK_USE_NBNS)
+                    SYS_CONSOLE_PRINT("    Interface %s on host %s - NBNS enabled\r\n", netName, netBiosName);
+#else
+                    SYS_CONSOLE_PRINT("    Interface %s on host %s - NBNS disabled\r\n", netName, netBiosName);
+#endif  // defined(TCPIP_STACK_USE_NBNS)
+                    (void)netName;          // avoid compiler warning 
+                    (void)netBiosName;      // if SYS_CONSOLE_PRINT is null macro
 
-                udp_serverData.state = UDP_SERVER_STATE_SERVICE_TASKS;
+                }
+                udp_serverData.state = UDP_SERVER_TCPIP_WAIT_FOR_IP;
+
             }
             break;
-        }
 
-        case UDP_SERVER_STATE_SERVICE_TASKS:
-        {
 
+        case UDP_SERVER_TCPIP_WAIT_FOR_IP:
+            nNets = TCPIP_STACK_NumberOfNetworksGet();
+            for (i = 0; i < nNets; i++) {
+                netH = TCPIP_STACK_IndexToNet(i);
+                if (!TCPIP_STACK_NetIsReady(netH)) {
+                    return; // interface not ready yet!
+                }
+                IPV4_ADDR           ipAddr;
+                ipAddr.Val = TCPIP_STACK_NetAddress(netH);
+                SYS_CONSOLE_MESSAGE(TCPIP_STACK_NetNameGet(netH));
+                SYS_CONSOLE_MESSAGE(" IP Address: ");
+                SYS_CONSOLE_PRINT("%d.%d.%d.%d \r\n", ipAddr.v[0], ipAddr.v[1], ipAddr.v[2], ipAddr.v[3]); 
+            }
+            // all interfaces ready. Could start transactions!!!
+            udp_serverData.state = UDP_SERVER_BSD_CREATE_SOCKET;
+            //... etc.
             break;
+        case UDP_SERVER_BSD_CREATE_SOCKET:
+        {
+            SOCKET udpSkt = socket(AF_INET, SOCK_DGRAM, IPPROTO_UDP);
+            if (udpSkt == SOCKET_ERROR) {
+                udp_serverData.state = UDP_SERVER_TCPIP_WAIT_FOR_IP;
+                return;
+            } else {
+                udp_serverData.socket = (SOCKET) udpSkt;
+                udp_serverData.state = UDP_SERVER_BSD_BIND;
+            }
         }
+            break;
 
-        /* TODO: implement your application state machine.*/
+        case UDP_SERVER_BSD_BIND:
+        {
+            struct sockaddr_in addr;
+            int addrlen = sizeof (struct sockaddr_in);
+            addr.sin_port = SERVER_PORT;
+            addr.sin_addr.S_un.S_addr = IP_ADDR_ANY;
+            if (bind(udp_serverData.socket, (struct sockaddr*) &addr, addrlen) == SOCKET_ERROR) {
+                closesocket(udp_serverData.socket);
+                udp_serverData.state = UDP_SERVER_TCPIP_SERVING_CONNECTION;
+            } else {
+                udp_serverData.state = UDP_SERVER_TCPIP_SERVING_CONNECTION;
+            }
+        }
+            break;
 
+        case UDP_SERVER_TCPIP_SERVING_CONNECTION:
+        {
+            uint8_t AppBuffer[32];
 
-        /* The default state should never be executed. */
+            struct sockaddr_in clientaddr;
+            int len = sizeof (struct sockaddr_in);
+
+            // Figure out how many bytes have been received and how many we can transmit.
+            int i = recvfrom(udp_serverData.socket, (char*) AppBuffer, sizeof (AppBuffer), 0, (struct sockaddr *) &clientaddr, &len);
+
+            if (i <= 0) {
+                break;
+            }
+
+            SYS_CONSOLE_PRINT("Recieved '%s' size %d\r\n", AppBuffer, i);
+            SetLED(AppBuffer[0]);
+            sendto(udp_serverData.socket, (char *) AppBuffer, i, 0, (struct sockaddr *) &clientaddr, len);
+
+            udp_serverData.state = UDP_SERVER_TCPIP_CLOSING_CONNECTION;
+        }
+            break;
+        case UDP_SERVER_TCPIP_CLOSING_CONNECTION:
+        {
+            closesocket(udp_serverData.socket);
+
+            udp_serverData.state = UDP_SERVER_BSD_CREATE_SOCKET;
+
+        }
+            break;
         default:
-        {
-            /* TODO: Handle error in application's state machine. */
             break;
-        }
     }
 }
 

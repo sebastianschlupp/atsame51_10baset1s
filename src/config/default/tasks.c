@@ -65,18 +65,8 @@
 void EIC_User_Handler15()
 {
     SYS_DEBUG_PRINT(SYS_ERROR_DEBUG, "Normal Boop!\n\r");
-    LED0_Toggle();
     UDP_CLIENT_Send_Packet=true;
 }
-
-void _TCPIP_STACK_Task(  void *pvParameters  )
-{
-    while(1)
-    {
-        TCPIP_STACK_Task(sysObj.tcpip);
-    }
-}
-
 /* Handle for the UDP_SERVER_Tasks. */
 TaskHandle_t xUDP_SERVER_Tasks;
 
@@ -97,6 +87,15 @@ static void lUDP_CLIENT_Tasks(  void *pvParameters  )
     {
         UDP_CLIENT_Tasks();
         vTaskDelay(1U / portTICK_PERIOD_MS);
+    }
+}
+
+
+void _TCPIP_STACK_Task(  void *pvParameters  )
+{
+    while(1)
+    {
+        TCPIP_STACK_Task(sysObj.tcpip);
     }
 }
 
@@ -185,20 +184,20 @@ void SYS_Tasks ( void )
 
     /* Maintain the application's state machine. */
         /* Create OS Thread for UDP_SERVER_Tasks. */
-    /*(void) xTaskCreate((TaskFunction_t) lUDP_SERVER_Tasks,
+    (void) xTaskCreate((TaskFunction_t) lUDP_SERVER_Tasks,
                 "UDP_SERVER_Tasks",
                 256,
                 NULL,
                 1,
-                &xUDP_SERVER_Tasks);*/
+                &xUDP_SERVER_Tasks);
 
     /* Create OS Thread for UDP_CLIENT_Tasks. */
-    (void) xTaskCreate((TaskFunction_t) lUDP_CLIENT_Tasks,
+    /*(void) xTaskCreate((TaskFunction_t) lUDP_CLIENT_Tasks,
                 "UDP_CLIENT_Tasks",
                 256,
                 NULL,
                 1,
-                &xUDP_CLIENT_Tasks);
+                &xUDP_CLIENT_Tasks);*/
 
 
 
