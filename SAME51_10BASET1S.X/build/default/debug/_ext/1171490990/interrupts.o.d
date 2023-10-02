@@ -156,6 +156,15 @@ build/default/debug/_ext/1171490990/interrupts.o: \
  ../src/third_party/rtos/FreeRTOS/Source/include/semphr.h \
  ../src/third_party/rtos/FreeRTOS/Source/include/queue.h \
  ../src/third_party/rtos/FreeRTOS/Source/include/task.h \
+ ../src/config/default/system/int/sys_int.h \
+ ../src/config/default/system/ports/sys_ports.h \
+ ../src/config/default/system/cache/sys_cache.h \
+ ../src/config/default/system/dma/sys_dma.h \
+ ../src/config/default/system/reset/sys_reset.h \
+ ../src/config/default/osal/osal.h \
+ ../src/config/default/system/debug/sys_debug.h \
+ ../src/config/default/system/console/sys_console.h \
+ ../src/config/default/system/console/src/sys_console_local.h \
  ../src/config/default/library/tcpip/tcpip.h \
  ../src/config/default/library/tcpip/tcpip_common_ports.h \
  ../src/config/default/library/tcpip/tcpip_manager.h \
@@ -178,15 +187,6 @@ build/default/debug/_ext/1171490990/interrupts.o: \
  ../src/config/default/system/time/sys_time.h \
  ../src/config/default/system/time/sys_time_definitions.h \
  ../src/config/default/system/sys_random_h2_adapter.h \
- ../src/config/default/system/int/sys_int.h \
- ../src/config/default/system/ports/sys_ports.h \
- ../src/config/default/system/cache/sys_cache.h \
- ../src/config/default/system/dma/sys_dma.h \
- ../src/config/default/system/reset/sys_reset.h \
- ../src/config/default/osal/osal.h \
- ../src/config/default/system/debug/sys_debug.h \
- ../src/config/default/system/console/sys_console.h \
- ../src/config/default/system/console/src/sys_console_local.h \
  ../src/config/default/peripheral/sercom/i2c_master/plib_sercom2_i2c_master.h \
  ../src/config/default/peripheral/sercom/i2c_master/plib_sercom_i2c_master_common.h \
  ../src/config/default/peripheral/sercom/spi_master/plib_sercom1_spi_master.h \
@@ -535,6 +535,24 @@ build/default/debug/_ext/1171490990/interrupts.o: \
 
 ../src/third_party/rtos/FreeRTOS/Source/include/task.h:
 
+../src/config/default/system/int/sys_int.h:
+
+../src/config/default/system/ports/sys_ports.h:
+
+../src/config/default/system/cache/sys_cache.h:
+
+../src/config/default/system/dma/sys_dma.h:
+
+../src/config/default/system/reset/sys_reset.h:
+
+../src/config/default/osal/osal.h:
+
+../src/config/default/system/debug/sys_debug.h:
+
+../src/config/default/system/console/sys_console.h:
+
+../src/config/default/system/console/src/sys_console_local.h:
+
 ../src/config/default/library/tcpip/tcpip.h:
 
 ../src/config/default/library/tcpip/tcpip_common_ports.h:
@@ -578,24 +596,6 @@ build/default/debug/_ext/1171490990/interrupts.o: \
 ../src/config/default/system/time/sys_time_definitions.h:
 
 ../src/config/default/system/sys_random_h2_adapter.h:
-
-../src/config/default/system/int/sys_int.h:
-
-../src/config/default/system/ports/sys_ports.h:
-
-../src/config/default/system/cache/sys_cache.h:
-
-../src/config/default/system/dma/sys_dma.h:
-
-../src/config/default/system/reset/sys_reset.h:
-
-../src/config/default/osal/osal.h:
-
-../src/config/default/system/debug/sys_debug.h:
-
-../src/config/default/system/console/sys_console.h:
-
-../src/config/default/system/console/src/sys_console_local.h:
 
 ../src/config/default/peripheral/sercom/i2c_master/plib_sercom2_i2c_master.h:
 
